@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    height: 100vh;
+    background-size: 300% 100%;
+    animation: gradient 15s ease infinite;
+    overflow: hidden;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.bar{
+    position: absolute;
+    top: 0;
+    left: 25%;
+    background-color: #00000057;
+    width: 1rem;
+    height: 100%;
+}
+
+.bar.mod{
+    left: 75%;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    right: 50%;
+}
+
+.help{
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    
+}
+
+.help i{
+    font-size: 2.5rem;
+    color: var(--light-secondary-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+
+.help .surround{
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4rem 0 4rem 5rem;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.help .surround:hover{
+    background-color: var(--light-secondary-color);
+    width: 8rem;
+    height: 8rem;
+}
+
+.cute-bttm{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    top: 65%;
+    width: 100%;
+    
+}
+
+.cute-bttm p{
+    display: flex;
+    position: relative;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #000000;
+    text-align: center;
+    padding: 2rem;
+    border: 0.2rem solid #000000;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.cute-bttm p:hover{
+    background-color: #e9e8fa;
+    border-color: #e9e8fa;
+    color : #000000;
+    cursor: pointer;
+    user-select: none;
+}
+
+.animated-btn.initial-transition{
+    color: #e9e8fa;
+    user-select: none;
+    animation: cute-bttm 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+@keyframes cute-bttm {
+    0% {
+        transform: scale(1);
+        color: #000000;
+    }
+
+    50% {
+        color: #e9e8fa;
+    }
+
+    100% {
+        transform: scale(20);
+        color: #e9e8fa;
+        
+    }
+}
