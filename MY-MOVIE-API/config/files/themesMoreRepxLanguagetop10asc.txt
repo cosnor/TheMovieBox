@@ -1,0 +1,10 @@
+Croatian,Action comedy and silly heroics,1
+Bulgarian,Action comedy and silly heroics,1
+Azerbaijani,Action comedy and silly heroics,1
+Afrikaans,Action comedy and silly heroics,1
+Esperanto,Action comedy and silly heroics,1
+Finnish,Action comedy and silly heroics,1
+Georgian,Action comedy and silly heroics,1
+Gujarati,Action comedy and silly heroics,1
+Lao,Action comedy and silly heroics,1
+Lithuanian,Action comedy and silly heroics,1

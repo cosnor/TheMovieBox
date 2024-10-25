@@ -1,0 +1,50 @@
+Afrikaans,Action comedy and silly heroics,1
+Arabic,Action comedy and silly heroics,19
+Azerbaijani,Action comedy and silly heroics,1
+Bulgarian,Action comedy and silly heroics,1
+Cantonese,Action comedy and silly heroics,84
+Chinese,Action comedy and silly heroics,61
+Croatian,Action comedy and silly heroics,1
+Czech,Action comedy and silly heroics,7
+Dutch,Action comedy and silly heroics,5
+Eastern Punjabi, Eastern Panjabi,Action comedy and silly heroics,2
+English,Action comedy and silly heroics,1357
+Esperanto,Action comedy and silly heroics,1
+Finnish,Action comedy and silly heroics,1
+French,Action comedy and silly heroics,85
+Georgian,Action comedy and silly heroics,1
+German,Action comedy and silly heroics,56
+Greek (modern),Action comedy and silly heroics,4
+Gujarati,Action comedy and silly heroics,1
+Hebrew (modern),Action comedy and silly heroics,4
+Hindi,Action comedy and silly heroics,43
+Hungarian,Action comedy and silly heroics,3
+Icelandic,Action comedy and silly heroics,2
+Indonesian,Action comedy and silly heroics,2
+Italian,Action comedy and silly heroics,69
+Japanese,Action comedy and silly heroics,49
+Khmer,Action comedy and silly heroics,2
+Korean,Action comedy and silly heroics,19
+Lao,Action comedy and silly heroics,1
+Latin,Action comedy and silly heroics,10
+Lithuanian,Action comedy and silly heroics,1
+Malay,Action comedy and silly heroics,1
+Malayalam,Action comedy and silly heroics,2
+Marathi,Action comedy and silly heroics,2
+Moldavian,Action comedy and silly heroics,1
+Mongolian,Action comedy and silly heroics,1
+Norwegian,Action comedy and silly heroics,4
+Persian (Farsi),Action comedy and silly heroics,1
+Polish,Action comedy and silly heroics,4
+Portuguese,Action comedy and silly heroics,17
+Romanian,Action comedy and silly heroics,2
+Russian,Action comedy and silly heroics,56
+Samoan,Action comedy and silly heroics,1
+Sanskrit (Sa?sk?ta),Action comedy and silly heroics,1
+Scottish Gaelic, Gaelic,Action comedy and silly heroics,1
+Serbian,Action comedy and silly heroics,1
+Slovak,Action comedy and silly heroics,1
+Spanish,Action comedy and silly heroics,112
+Swahili,Action comedy and silly heroics,1
+Swedish,Action comedy and silly heroics,5
+Tagalog,Action comedy and silly heroics,1

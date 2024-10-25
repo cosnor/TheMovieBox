@@ -1,0 +1,10 @@
+Drama,217046
+Comedy,132508
+Documentary,84096
+Romance,49499
+Horror,46936
+Thriller,44804
+Action,39243
+Music,36611
+Crime,33986
+Animation,25285

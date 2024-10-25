@@ -1,0 +1,10 @@
+Woody Allen,Crude humor and satire,38
+Woody Allen,Relationship comedy,31
+Alfred Hitchcock,Thrillers and murder mysteries,31
+Woody Allen,Gags, jokes, and slapstick humor,29
+Alfred Hitchcock,Intriguing and suspenseful murder mysteries,28
+Woody Allen,Charming romances and delightful chemistry,26
+Woody Allen,Amusing jokes and witty satire,25
+Woody Allen,Laugh-out-loud relationship entanglements,25
+Alfred Hitchcock,Noir and dark crime dramas,25
+Alfred Hitchcock,Suspenseful crime thrillers,24

@@ -1,0 +1,10 @@
+English,473068
+French,70487
+Spanish,64539
+German,55524
+Japanese,45287
+Portuguese,31670
+Chinese,31628
+Russian,27820
+Italian,27208
+Korean,14740

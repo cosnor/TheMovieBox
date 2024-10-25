@@ -1,0 +1,10 @@
+Universal Pictures,Crude humor and satire,265
+Universal Pictures,Gags, jokes, and slapstick humor,227
+Columbia Pictures,Crude humor and satire,219
+Paramount,Crude humor and satire,216
+Warner Bros. Pictures,Crude humor and satire,212
+20th Century Fox,Crude humor and satire,202
+Paramount,Gags, jokes, and slapstick humor,194
+Columbia Pictures,Gags, jokes, and slapstick humor,186
+Warner Bros. Pictures,Gags, jokes, and slapstick humor,179
+Universal Pictures,Funny jokes and crude humor,171

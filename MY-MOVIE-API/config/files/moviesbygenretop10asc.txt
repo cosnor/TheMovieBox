@@ -1,0 +1,10 @@
+Western,8835
+War,10758
+History,17008
+Science Fiction,21209
+Mystery,21394
+Fantasy,22280
+Adventure,23093
+TV Movie,25874
+Family,27511
+Crime,35507

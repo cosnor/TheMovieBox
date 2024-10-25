@@ -1,0 +1,19 @@
+Action,39243
+Adventure,21186
+Animation,25285
+Comedy,132508
+Crime,33986
+Documentary,84096
+Drama,217046
+Family,23562
+Fantasy,19312
+History,14087
+Horror,46936
+Music,36611
+Mystery,20101
+Romance,49499
+Science Fiction,18616
+Thriller,44804
+TV Movie,24184
+War,9314
+Western,8580

@@ -1,0 +1,10 @@
+BBC,3560
+Warner Bros. Pictures,3222
+Columbia Pictures,3000
+ARTE,2828
+Metro-Goldwyn-Mayer,2789
+ONF | NFB,2662
+Universal Pictures,2633
+Paramount,2627
+ZDF,2569
+Toei Company,2360

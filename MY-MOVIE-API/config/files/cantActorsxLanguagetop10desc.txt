@@ -1,0 +1,10 @@
+English,291652
+French,43571
+Spanish,42459
+German,39742
+Japanese,36083
+Italian,19997
+Chinese,19360
+Portuguese,19201
+Russian,17796
+Korean,10822

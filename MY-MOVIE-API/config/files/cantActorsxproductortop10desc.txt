@@ -1,0 +1,10 @@
+BBC,3238
+Warner Bros. Pictures,3091
+Columbia Pictures,2814
+Metro-Goldwyn-Mayer,2717
+Paramount,2516
+Universal Pictures,2450
+Toei Company,2347
+ZDF,2255
+ARTE,1925
+Nikkatsu Corporation,1853

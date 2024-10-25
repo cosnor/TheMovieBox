@@ -1,0 +1,10 @@
+Netherlands Antilles,19
+French Southern Territories,38
+Svalbard and Jan Mayen,45
+Heard Island and McDonald Islands,52
+Kiribati,52
+Nauru,52
+Tonga,53
+Eritrea,54
+Sao Tome and Principe,54
+Seychelles,54

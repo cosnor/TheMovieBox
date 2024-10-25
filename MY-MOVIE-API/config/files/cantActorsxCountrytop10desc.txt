@@ -1,0 +1,10 @@
+USA,210622
+Germany,67055
+France,60463
+UK,58735
+Japan,36441
+Italy,27910
+India,26391
+Brazil,25686
+Spain,25063
+Canada,24336

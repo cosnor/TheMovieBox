@@ -1,0 +1,50 @@
+English,473068
+Nauruan,3
+Venda,4
+Chechen,44
+Kwanyama, Kuanyama,1
+Hausa,72
+Zulu,280
+Southern Sotho,49
+Sardinian,30
+Manx,1
+Inuktitut,135
+Gujarati,329
+Dzongkha,49
+Lithuanian,1035
+Cornish,19
+Afar,21
+Interlingue,8
+Maltese,62
+Telugu,3416
+Bashkir,22
+Burmese,345
+Amharic,296
+Norwegian Nynorsk,17
+Cree,113
+Uzbek,193
+Zhuang, Chuang,4
+Estonian,1400
+Moldavian,131
+Twi,33
+Western Frisian,23
+Welsh,232
+Armenian,612
+Oriya,1149
+Luxembourgish, Letzeburgesch,102
+Cantonese,7380
+Indonesian,5341
+Tigrinya,32
+Swedish,10068
+Tibetan Standard, Tibetan, Central,224
+Hebrew (modern),3947
+Guaraní,170
+Japanese,45287
+Yoruba,132
+Persian (Farsi),4981
+Tahitian,18
+Tatar,36
+Akan,39
+Ossetian, Ossetic,12
+Northern Ndebele,6
+Limburgish, Limburgan, Limburger,8

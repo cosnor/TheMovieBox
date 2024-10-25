@@ -1,0 +1,10 @@
+Tola,2.85
+Avaric,2.8975
+Chuvash,3.01
+Swati,3.01
+Moldavian,3.0214285714285714
+Malagasy,3.05
+Persian (Farsi),3.0991272727272756
+Telugu,3.1255525606469026
+Western Frisian,3.17
+Scottish Gaelic, Gaelic,3.181785714285714

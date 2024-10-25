@@ -1,0 +1,50 @@
+Lao People's Democratic Republic,200
+Saint Kitts and Nevis,137
+Puerto Rico,3203
+Antigua and Barbuda,151
+Finland,9831
+Sao Tome and Principe,60
+Martinique,91
+Falkland Islands,82
+Rwanda,77
+Bahrain,430
+South Korea,24804
+Eswatini,127
+Northern Mariana Islands,317
+Christmas Island,83
+Gambia,113
+Liberia,65
+Bolivarian Republic of Venezuela,1441
+Guatemala,372
+Serbia and Montenegro,182
+Andorra,272
+State of Palestine,347
+Czechoslovakia,7305
+Vietnam,2674
+USA,320901
+New Zealand,4456
+Angola,126
+Uganda,184
+Nauru,56
+Monaco,165
+Egypt,5114
+Kyrgyzstan,142
+Cocos (Keeling) Islands,85
+Mali,98
+Italy,36628
+Azerbaijan,543
+Brazil,37087
+Democratic Republic of Congo,113
+Bermuda,138
+Guinea-Bissau,109
+Netherlands,30948
+Palau,57
+Namibia,144
+Greenland,113
+USSR,9145
+Cameroon,201
+Jordan,237
+Belarus,633
+Madagascar,141
+Hong Kong,12577
+Cayman Islands,153

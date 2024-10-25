@@ -1,0 +1,10 @@
+USA,320901
+France,101670
+Germany,87159
+UK,82682
+Japan,48026
+Canada,38013
+Brazil,37087
+Italy,36628
+Spain,34019
+Netherlands,30948

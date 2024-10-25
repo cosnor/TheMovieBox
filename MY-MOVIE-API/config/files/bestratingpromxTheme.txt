@@ -1,0 +1,50 @@
+Action comedy and silly heroics,2.859239412273123
+Action-packed space and alien sagas,2.8922576687116552
+Adorable animals and heartwarming families,3.0596084828711287
+Adrenaline-fueled action and fast cars,2.9499585635359105
+Air pilot heroism and survival,3.085583756345178
+Amusing jokes and witty satire,3.078350349274584
+Bloody vampire horror,2.7702583025830227
+Bollywood emotional dramas,3.1501709401709403
+Bravery in War,3.306606822262121
+Brutal, violent prison drama,3.2984440227703993
+Captivating relationships and charming romance,3.458396094839614
+Captivating vision and Shakespearean drama,3.3917472118959093
+Catchy songs and hilarious musical comedy,3.0948278285312725
+Challenging or sexual themes & twists,3.2388229273285605
+Charming romances and delightful chemistry,3.2741019698725435
+Chilling experiments and classic monster horror,2.8465633423180607
+Creepy, chilling, and terrifying horror,2.898891060087937
+Crime, drugs and gangsters,3.284466273739362
+Crude humor and satire,3.0424827035657307
+Dance rhythms and catchy tunes,3.2110416666666626
+Dangerous technology and the apocalypse,2.8647939262472875
+Dazzling vocal performances and musicals,3.291470967741935
+Disastrous voyages and heroic survival,3.1493569131832793
+Dreamlike, quirky, and surreal storytelling,3.387470588235296
+Emotional and captivating fantasy storytelling,3.600612648221346
+Emotional and touching family dramas,3.3986452353616534
+Emotional LGBTQ relationships,3.3684848484848477
+Emotional life of renowned artists,3.468548752834465
+Emotional teen coming-of-age stories,3.309180171591988
+Enduring stories of family and marital drama,3.394965357967668
+Engaging, intense crime and casino drama,3.4151515151515155
+Epic adventure and breathtaking battles,3.094963503649632
+Epic heroes,3.0224483775811226
+Epic history and literature,3.3624966078697414
+Erotic relationships and desire,3.2389423076923043
+Exciting spy thrillers with tense intrigue,3.142148900169205
+Explosive and action-packed heroes vs. villains,2.899021428571431
+Extreme gory horror and cannibalism,2.7781321839080477
+Fairy-tale fantasy and enchanted magic,3.145923566878981
+Faith and religion,3.2191090629800327
+Faith and spiritual journeys,3.1142727272727293
+Fantasy adventure, heroism, and swordplay,3.0573794002607557
+Fascinating, emotional stories and documentaries,3.5780306905370822
+Funny jokes and crude humor,2.9773970783532557
+Gags, jokes, and slapstick humor,3.0119924294563023
+Gory, gruesome, and slasher horror,2.8326227347611144
+Gothic and eerie haunting horror,2.880648018648022
+Graphic violence and brutal revenge,3.103881118881118
+Gripping, intense violent crime,3.405557872784148
+Gritty crime and ruthless gangsters,3.2952897196261697

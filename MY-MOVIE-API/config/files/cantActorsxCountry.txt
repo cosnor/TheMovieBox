@@ -1,0 +1,50 @@
+Afghanistan,150
+Albania,480
+Algeria,323
+American Samoa,298
+Andorra,255
+Angola,83
+Anguilla,129
+Antarctica,67
+Antigua and Barbuda,145
+Argentina,10815
+Armenia,407
+Aruba,127
+Australia,17257
+Austria,5517
+Azerbaijan,482
+Bahamas,158
+Bahrain,417
+Bangladesh,938
+Barbados,103
+Belarus,487
+Belgium,6477
+Belize,138
+Benin,76
+Bermuda,134
+Bhutan,70
+Bolivarian Republic of Venezuela,1121
+Bolivia,483
+Bosnia and Herzegovina,719
+Botswana,117
+Brazil,25686
+British Indian Ocean Territory,104
+British Virgin Islands,141
+Brunei Darussalam,140
+Bulgaria,2139
+Burkina Faso,130
+Burundi,58
+Cambodia,516
+Cameroon,173
+Canada,24336
+Cape Verde,115
+Cayman Islands,147
+Central African Republic,57
+Chad,57
+Chile,2659
+China,12572
+Christmas Island,79
+Cocos (Keeling) Islands,82
+Colombia,2042
+Comoros,59
+Congo,60

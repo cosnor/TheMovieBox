@@ -1,0 +1,50 @@
+Drama,Western frontier dramas with a touch of humor,84
+Comedy,Student coming-of-age challenges,194
+Animation,Dazzling vocal performances and musicals,91
+Family,Faith and spiritual journeys,21
+Romance,Brutal, violent prison drama,25
+Thriller,Gory, gruesome, and slasher horror,1514
+Drama,Crude humor and satire,848
+Crime,Racism and the powerful fight for justice,99
+Science Fiction,Heists and thrilling action,24
+Music,Amusing jokes and witty satire,61
+Comedy,Brutal, violent prison drama,28
+Documentary,Emotional teen coming-of-age stories,25
+Drama,Laugh-out-loud relationship entanglements,898
+Comedy,Military combat and heroic soldiers,62
+Action,Violent action, guns, and crime,1014
+Comedy,Holiday joy and heartwarming Christmas,415
+Animation,Charming romances and delightful chemistry,7
+Mystery,Imaginative space odysseys and alien encounters,52
+Western,Catchy songs and hilarious musical comedy,30
+Western,Disastrous voyages and heroic survival,3
+Action,Thought-provoking sci-fi action and future technology,382
+Drama,Gritty crime and ruthless gangsters,650
+Action,Intriguing and suspenseful murder mysteries,160
+Documentary,Surreal and thought-provoking visions of life and death,33
+Horror,Adrenaline-fueled action and fast cars,23
+Family,Bloody vampire horror,1
+Science Fiction,Song and dance,20
+Crime,Passion and romance,75
+Western,Emotional and captivating fantasy storytelling,4
+War,Surreal and thought-provoking visions of life and death,33
+Animation,Intense combat and martial arts,52
+Romance,Noir and dark crime dramas,96
+War,Violent crime and drugs,5
+Drama,Thought-provoking sci-fi action and future technology,223
+Science Fiction,Twisted dark psychological thriller,263
+Adventure,Air pilot heroism and survival,56
+Documentary,Song and dance,75
+Romance,Faith and religion,81
+War,Song and dance,13
+Horror,Captivating vision and Shakespearean drama,3
+Comedy,Underdog fighting and boxing stories,35
+Music,Catchy songs and hilarious musical comedy,336
+War,High speed and special ops,46
+Action,Laugh-out-loud relationship entanglements,150
+Adventure,Relationship comedy,80
+History,Dreamlike, quirky, and surreal storytelling,12
+Documentary,Passion and romance,2
+Adventure,Charming romances and delightful chemistry,54
+History,Passion and romance,138
+Western,Amusing jokes and witty satire,30
