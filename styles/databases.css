@@ -543,11 +543,27 @@ transform: rotate(45deg);
     padding: 0rem;
 }
 
-.graphic-section i{
+.graphic-section .filler i{
+    position: static;
     font-size: 5rem;
+    color: var(--light-tertiary-color);
+    cursor: default;
+    transition: all 0.3s ease;
+}
+
+.graphic-section i{
+    position: absolute;
+    top: 8vh;
+    right: 5vw;
+    font-size: 3rem;
     color: var(--light-tertiary-color);
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+.graphic-section i:hover{
+    color: var(--medium-tertiary-color);
+    transform: scale(1.5);
 }
 
 
