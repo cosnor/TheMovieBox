@@ -1,0 +1,553 @@
+.data-interface{
+    transition: all 0.5s ease;
+    animation: opacity 1s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls{
+    display: flex;
+    width: 100%;
+    height: 6rem;
+}
+
+
+.node-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    color: var(--light-primary-color);
+}
+
+.node-title h1{
+    margin-top: 1rem;
+    font-size: 5rem;
+    font-family: "Space Grotesk", sans-serif;
+    border: solid 0.1rem var(--medium-secondary-color);
+    padding: 1rem;
+    border-radius: 2rem 3rem 1rem 3rem;
+    border-top: 2rem;
+    border-left: 2rem;
+}
+
+.node-carrusel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50rem;
+    overflow-x: hidden;
+}
+
+.node{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    overflow: visible;
+    
+}
+
+.nodule1{
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 27rem;
+    height: 20rem;
+    background-color: rgba(196, 53, 74, 0.23);
+    border-radius: 4rem;
+    translate: -45vw 42vh;
+    animation: rotation1 30s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite ;  
+}
+
+.nodule2{
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 18rem;
+    height: 18rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6rem;
+    translate: -42vw 32vh;
+    animation: rotation2 15s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+.nodule3{
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 21rem;
+    height: 17rem;
+    background-color: rgba(71, 123, 226, 0.23);
+    border-radius: 8rem;
+    rotate: -15deg;
+    translate: -35vw 35vh;
+    animation: rotation3 20s cubic-bezier(0.55, 0.055, 0.675, 0.19) infinite;
+}
+
+.nodule4{
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 15rem;
+    height: 17rem;
+    background-color: rgba(190, 71, 226, 0.23);
+    border-radius: 4rem;
+    rotate: 35deg;
+    translate: -38vw 55vh;
+    animation: rotation4 20s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+
+.nodule5{
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 14rem;
+    height: 15rem;
+    background-color: rgba(107, 226, 136, 0.31);
+    border-radius: 10rem;
+    translate: -48vw 59vh;
+    animation: rotation5 10s cubic-bezier(0.55, 0.055, 0.675, 0.19) infinite;
+}
+
+.nodule6{
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10rem;
+    height: 6rem;
+    background-color: rgba(190, 71, 226, 0.23);
+    border-radius: 3rem;
+    translate: -52vw 45vh;
+    animation: rotation6 15s cubic-bezier(0.55, 0.055, 0.675, 0.19) infinite;
+}
+
+.show-more{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 5rem;
+    top: -6.5rem;
+    right: -7.5rem;
+    background-color: var(--light-secondary-color);
+}
+
+.show-more i{
+    font-size: 5rem;
+    color: var(--medium-tertiary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.show-more i:hover{
+    color: var(--dark-tertiary-color);
+    transform: scale(1.1);
+}
+
+.show-more.fade, .left-arrow.fade, .right-arrow.fade{
+    animation: fade 1s cubic-bezier(0.165, 0.84, 0.44, 1)  forwards;
+}
+
+.nodule-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    animation: opacity 1s ease-in;
+}
+
+.nodule-content h3{
+    font-size: 2vw;
+    font-family: "Space Grotesk", sans-serif;
+    color: var(--light-primary-color);
+}
+
+.nodule-content figure {
+    width: 10vw;
+}
+
+figcaption{
+    color: var(--light-primary-color);
+    font-size: 0.9vw;
+    text-align: center;
+}
+
+.ver-mas{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    border: solid 0.2rem var(--medium-secondary-color);
+    border-radius: 1rem 1rem 0.6rem 0;
+    border-left: 0.6rem;
+    border-top: 1rem;
+    align-items: center;
+    color: var(--light-primary-color);
+    font-size: 1.2vw;
+    cursor: pointer;
+    color: var(--light-secondary-color);
+    margin-top: 3rem;
+    transition: all 0.3s ease;
+}
+
+.ver-mas:hover{
+    color: var(--light-secondary-color);
+    transform: scale(1.1);
+    background-color: var(--medium-tertiary-color);
+    border-color: var(--dark-tertiary-color);
+}
+
+.nodule-content img{
+    width: 100%;
+    height: 100%;
+}
+
+.nodule-content p{
+    font-size: 1.5vw;
+    font-family: "Space Grotesk", sans-serif;
+    color: var(--light-primary-color);
+}
+
+.nodule1.pos1{
+    animation: position1 1s ease forwards;
+}
+
+.nodule2.pos2{
+    animation: position2 1s ease forwards;
+}
+
+.nodule3.pos3{
+    animation: position3 1s ease forwards;
+}
+
+.nodule4.pos4{
+    animation: position4 1s ease forwards;
+}
+
+.nodule5.pos5{
+    animation: position5 1s ease forwards;
+}
+
+.nodule6.pos6{
+    animation: position6 1s ease forwards;
+}
+
+
+.left-arrow{
+    position: absolute;
+    top: 60%;
+    left: 25%;
+    animation: opacity 1s ease;
+}
+
+.left-arrow i{
+    font-size: 5rem;
+    color: var(--light-secondary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.left-arrow i:hover{
+    color: var(--medium-tertiary-color);
+    transform: scale(1.5);
+}
+
+.right-arrow{
+    position: absolute;
+    top: 60%;
+    right: 26%;
+    animation: opacity 1s ease;
+
+}
+
+.right-arrow i{
+    font-size: 5rem;
+    color: var(--light-secondary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.right-arrow i:hover{
+    color: var(--medium-tertiary-color);
+    transform: scale(1.5);
+}
+
+.nodule-content.hidden{
+    display: none;
+    transition: all 0.5s ease;
+}
+
+.pos12{
+    animation: pos12 1s ease forwards;
+}
+
+.pos23{
+    animation: pos23 1s ease forwards;
+}
+
+.pos54{
+    animation: pos54 1s ease forwards;
+}
+
+.pos41{
+    animation: pos41 1s ease forwards;
+}
+
+.pos36{
+    animation: pos36 1s ease forwards;
+}
+
+.pos65{
+    animation: pos65 1s ease forwards;
+}
+
+.pos14{
+    animation: pos14 1s ease forwards;
+}
+
+.pos21{
+    animation: pos21 1s ease forwards;
+}
+
+.pos32{
+    animation: pos32 1s ease forwards;
+}
+
+.pos45{
+    animation: pos45 1s ease forwards;
+}
+
+.pos56{
+    animation: pos56 1s ease forwards;
+}
+
+.pos63{
+    animation: pos63 1s ease forwards;
+}
+
+.nodules-charts{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.chart-section {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    width: 90vw;
+    height: 90vh;
+    background-color: var(--light-primary-color);
+    z-index: 1000;
+    animation: slideUp 1s ease;
+    justify-content: center;
+    border-radius: 3rem 3rem 0 0;
+}
+
+.chart-section.hidden{
+    display: none;
+}
+
+.chart-section__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85vw;
+    height: 100%;
+    border: solid 1rem var(--medium-primary-color);
+    border-style: dashed;
+    border-bottom: 0;
+    margin-top: 3rem;
+    border-radius: 3rem;
+}
+
+.filter-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 100%;
+    background: linear-gradient(150deg, var(--light-secondary-color), #ffc574c9);
+    border-radius: 2.5rem 0rem;
+}
+
+.graphic-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 65%;
+    height: 100%;
+    padding: 3rem;
+}
+
+.filter-section .filters-title{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--medium-primary-color);
+    padding: 5rem;
+}
+
+.filter-section .filters-title h1{
+    position: absolute;
+    width: 85vh;
+    height: 5vw;
+    font-size: 3.5vw;
+    color: white;
+    font-family: "Sancreek", sans-serif;
+    rotate: -90deg;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8rem;
+
+}
+
+.fil-container {
+display: block;
+position: relative;
+padding-left: 35px;
+margin-bottom: 12px;
+cursor: pointer;
+font-size: 3rem;
+user-select: none;
+font-family: "Aubrey", sans-serif;
+color:  #3a2c2cda;
+font-weight: 500;
+}
+
+/* Hide the browser's default checkbox */
+.fil-container input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+height: 0;
+width: 0;
+}
+
+.filter-section p{
+    font-size: 1.5vw;
+    font-family: "Aubrey", sans-serif;
+    color:  #3a2c2cda;
+    font-weight: 600;
+    margin-top: 2rem;
+    text-align: justify;
+    padding: 2rem;
+}
+/* Create a custom checkbox */
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 25px;
+width: 25px;
+background-color: var(--medium-secondary-color);
+transition: all 0.2s ease;
+}
+
+/* On mouse-over, add a grey background color */
+.fil-container:hover input ~ .checkmark {
+background-color: var(--dark-secondary-color);
+}
+
+/* When the checkbox is checked, add an orange background */
+.fil-container input:checked ~ .checkmark {
+background-color:var(--light-tertiary-color)
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+
+/* Show the checkmark when checked */
+.fil-container input:checked ~ .checkmark:after {
+display: block;
+}
+
+/* Style the checkmark/indicator */
+.fil-container .checkmark:after {
+left: 9px;
+top: 5px;
+width: 5px;
+height: 10px;
+border: solid var(--light-secondary-color);
+border-width: 0 3px 3px 0;
+transform: rotate(45deg);
+}
+
+.filters{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.filters h4{
+    width: 90%;
+    height: fit-content;
+    background-color: transparent;
+    color: #3a2c2cda;
+    font-size: 2vw;
+    font-family: "Sancreek", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    margin: 1rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    padding: 1rem;
+    border: solid 0.5rem var(--medium-tertiary-color);
+    border-radius: 1rem 0rem;
+    border-style: double solid solid double;
+    filter: drop-shadow(0.2rem 0.3rem 0.2rem #A3927B);
+}
+
+.filler{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    border-radius: 1.5rem;
+    background-color: var(--medium-secondary-color);
+    padding: 0rem;
+}
+
+.graphic-section i{
+    font-size: 5rem;
+    color: var(--light-tertiary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+

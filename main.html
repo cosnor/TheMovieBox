@@ -4,32 +4,265 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/the_movie_box_logo.png">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/databases.css">
+    <link rel="stylesheet" href="styles/colors.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"/> 
     <title>The MovieBox</title>
     
 </head>
-<body>
-    <header>
-        <nav>
 
-        </nav>
-    </header>
+<body>
     <main>
-        <div class="control">
-            <figure>
-                <i class="fas fa-right-arrow"></i>
-            </figure>
-        </div>
-        <div class="carrusel">
-            <div class="item">a</div>
-            <div class="item">b</div>
-            <div class="item">c</div>
-            <div class="item">d</div>
-        </div>
-        <div class="control">
-            <figure>
-                <i class="fas fa-left-arrow"></i>
-            </figure>
-        </div>
+        <section class="tutorial">
+            <header>
+                <figure>
+                    <a href="index.html">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    </a>
+                </figure>
+            </header>
+            <article class="light-title">
+                <h1>Primeros</h1>
+            </article>
+            <article class="dark-title">
+                <h1>Pasos</h1>
+            </article>
+            <article class="film">
+                <div class="roll slide">
+                    <div class="roll-item">
+                        <div class="horizontal-bar">
+                            <div class="rectangle"></div>
+                            <div class="rectangle"></div>
+                            <div class="rectangle"></div>
+                        </div>
+                        <div class="roll-item__body">
+                            <div class="roll-item__body-text">
+                                <h3>
+                                    Paso 1
+                                </h3>
+                                <p>Haz clic en la flecha hacia la derecha. 
+
+                                    Encontrarás diferentes cajas con información relacionada agrupada.</p>
+                            </div>
+                        </div>
+                        <div class="horizontal-bar">
+                            <div class="rectangle"></div>
+                            <div class="rectangle"></div>
+                            <div class="rectangle"></div>
+                        </div>
+                    
+                    </div>
+                    <div class="roll-item">
+                        <div class="horizontal-bar">
+                            <div class="rectangle"></div>
+                            <div class="rectangle"></div>
+                            <div class="rectangle"></div>
+                        </div>
+                        <div class="roll-item__body">
+                            <div class="roll-item__body-text">
+                                <h3>
+                                    Paso 2
+                                </h3>
+                                <p>Muévete con las flechas laterales hasta seleccionar el grupo de datos deseado. 
+                                    Si te interesa alguno, haz clic al botón de ver más. </p>
+                            </div>
+                        </div>
+                        <div class="horizontal-bar">
+                            <div class="rectangle"></div>
+                            <div class="rectangle"></div>
+                            <div class="rectangle"></div>
+                        </div>
+                    
+                    </div>
+                    <div class="roll-item">
+                        <div class="horizontal-bar">
+                            <div class="rectangle"></div>
+                            <div class="rectangle"></div>
+                            <div class="rectangle"></div>
+                        </div>
+                        <div class="roll-item__body">
+                            <div class="roll-item__body-text">
+                                <h3>
+                                    Paso 3
+                                </h3>
+                                <p>Para desplazarte dentro de un mismo grupo de datos, usa las flechas laterales y listo. Pulsa ver más para descubrir qué datos aguardan por ti.</p>
+                            </div>
+                        </div>
+                        <div class="horizontal-bar">
+                            <div class="rectangle"></div>
+                            <div class="rectangle"></div>
+                            <div class="rectangle"></div>
+                        </div>
+                    
+                    </div>
+                    <div class="roll-item mod">
+                        <div class="horizontal-bar">
+                            <div class="rectangle"></div>
+                        </div>
+                        <div class="roll-item__body">
+                            <div class="roll-item__body-text">
+                                <figure class="next-arrow">
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="horizontal-bar">
+                            <div class="rectangle"></div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </article>
+            <article class="bar"></article>
+        </section>
+        <section class="data-interface hidden">
+            <div class="controls">
+                a
+            </div>
+            <div class="node-title">
+                <h1>Cantidad de Películas por...</h1>
+            </div>
+            <div class="nodules-charts hidden">
+                <div class="chart-section hidden">
+                    <div class="chart-section__container">
+                        <div class="filter-section">
+                            <div class="filters-title">
+                                <h1>Productor Ticket</h1>
+                            </div>
+                            <div class="filters">
+                                <h4>Filtra por </h4>
+                                <label class="fil-container"> Filtro 1
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="fil-container"> Filtro 2
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="fil-container"> Filtro 3
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="fil-container"> Filtro 4
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                    Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                    sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                    Saepe ipsam ad soluta.</p>
+                            </div>
+                        </div>
+                        <div class="graphic-section">
+                            <canvas id="myChart"></canvas>
+                            <div class="filler">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+            <div class="node-carrusel">
+                <div class="left-arrow hidden">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                </div>
+                <div class="right-arrow hidden">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </div>
+                <div class="node quantityMovies">
+                    <div class="nodule1">
+                        <div class="nodule-content hidden">
+                            <h3>Productor</h3>
+                            <figure>
+                                <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                <figcaption>Vista Previa</figcaption>
+                            </figure>
+                            <div class="ver-mas">
+                                Ver Más
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nodule2">
+                        <div class="nodule-content hidden">
+                            <h3>Director</h3>
+                            <figure>
+                                <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                <figcaption>Vista Previa</figcaption>
+                            </figure>
+                            <div class="ver-mas">
+                                Ver Más
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nodule3">
+                        <div class="nodule-content hidden">
+                            <h3>Año</h3>
+                            <figure>
+                                <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                <figcaption>Vista Previa</figcaption>
+                            </figure>
+                            <div class="ver-mas">
+                                Ver Más
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nodule4">
+                        <div class="nodule-content hidden">
+                            <h3>Género</h3>
+                            <figure>
+                                <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                <figcaption>Vista Previa</figcaption>
+                            </figure>
+                            <div class="ver-mas">
+                                Ver Más
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nodule5">
+                        <div class="nodule-content hidden">
+                            <h3>Lenguaje</h3>
+                            <figure>
+                                <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                <figcaption>Vista Previa</figcaption>
+                            </figure>
+                            <div class="ver-mas">
+                                Ver Más
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nodule6">
+                        <div class="nodule-content hidden">
+                            <h3>Actor</h3>
+                            <figure>
+                                <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                <figcaption>Vista Previa</figcaption>
+                            </figure>
+                            <div class="ver-mas">
+                                Ver Más
+                            </div>
+                        </div>
+                    </div>
+                    <div class="show-more">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+        </footer>
     </main>
 </body>
+<script src="scripts/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="scripts/charts.js"></script>
 </html>
