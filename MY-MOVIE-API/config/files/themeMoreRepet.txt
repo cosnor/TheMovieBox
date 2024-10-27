@@ -4,20 +4,20 @@ Holiday joy and heartwarming Christmas,641
 Bollywood emotional dramas,892
 Quirky and endearing relationships,1748
 Superheroes in action-packed battles with villains,1443
-Brutal, violent prison drama,532
-Dreamlike, quirky, and surreal storytelling,868
+Brutal violent prison drama,532
+Dreamlike quirky and surreal storytelling,868
 Chilling experiments and classic monster horror,756
 Dance rhythms and catchy tunes,388
 Politics and human rights,1215
 Epic adventure and breathtaking battles,417
-Gory, gruesome, and slasher horror,3132
-Fantasy adventure, heroism, and swordplay,791
-Violent action, guns, and crime,1512
+Gory gruesome and slasher horror,3132
+Fantasy adventure heroism and swordplay,791
+Violent action guns and crime,1512
 Intriguing and suspenseful murder mysteries,1568
 Erotic relationships and desire,861
 Thought-provoking sci-fi action and future technology,859
 Funny jokes and crude humor,2289
-Crime, drugs and gangsters,1564
+Crime drugs and gangsters,1564
 Gritty crime and ruthless gangsters,1085
 Powerful poetic and passionate drama,637
 Bloody vampire horror,579
@@ -36,7 +36,7 @@ Fairy-tale fantasy and enchanted magic,630
 Moving relationship stories,4012
 Suspenseful crime thrillers,2102
 Bravery in War,596
-Gripping, intense violent crime,974
+Gripping intense violent crime,974
 Racism and the powerful fight for justice,555
 Explosive and action-packed heroes vs. villains,1433
 Emotional and touching family dramas,1804
@@ -46,5 +46,5 @@ Historical battles and epic heroism,941
 Faith and spiritual journeys,374
 Captivating vision and Shakespearean drama,277
 Epic history and literature,774
-Spooky, scary comedy,615
+Spooky scary comedy,615
 Laugh-out-loud relationship entanglements,2410

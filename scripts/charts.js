@@ -292,7 +292,7 @@ fetch('http://localhost:8000/movies/productor/cantActorsxproductor') // Cambia l
         dataxac1 = data.data.productors; // Cambia 'labels' según tu estructura JSON
         datayac1 = data.data.number_of_actors.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(ac1, {
+        new Chart(ac3, {
             type: 'bar',
             data: {
                 labels: dataxac1,
@@ -348,7 +348,7 @@ fetch('http://localhost:8000/movies/actor/cantActorxMovies') // Cambia la URL se
         dataxac3 = data.data.actors; // Cambia 'labels' según tu estructura JSON
         datayac3 = data.data.number_of_movies.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(ac3, {
+        new Chart(ac1, {
             type: 'bar',
             data: {
                 labels: dataxac3,
@@ -460,7 +460,7 @@ fetch('http://localhost:8000/movies/productor/themesMoreRepxproductor') // Cambi
         dataxth1 = data.data.productors; // Cambia 'labels' según tu estructura JSON
         datayth1 = data.data.count_times.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(th1, {
+        new Chart(th3, {
             type: 'bar',
             data: {
                 labels: dataxth1,
@@ -516,7 +516,7 @@ fetch('http://localhost:8000/movies/actor/themesMoreRepxactor') // Cambia la URL
         dataxth3 = data.data.actors; // Cambia 'labels' según tu estructura JSON
         datayth3 = data.data.count_times.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(th3, {
+        new Chart(th1, {
             type: 'bar',
             data: {
                 labels: dataxth3,
@@ -544,7 +544,7 @@ fetch('http://localhost:8000/movies/year/themesMoreRepxYear') // Cambia la URL s
         dataxth4 = data.data.years; // Cambia 'labels' según tu estructura JSON
         datayth4 = data.data.count_times.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(th4, {
+        new Chart(th6, {
             type: 'bar',
             data: {
                 labels: dataxth4,
@@ -593,14 +593,14 @@ fetch('http://localhost:8000/movies/genre/themesMoreRepxGenre') // Cambia la URL
     })
     .catch(error => console.error('Error:', error));
 
-fetch('http://localhost:8000/movies/language/themesMoreRepxLanguage') // Cambia la URL según tu configuración
+fetch('http://localhost:8000/movies/themeMoreRepet') // Cambia la URL según tu configuración
     .then(response => response.json())
     .then(data => {
         // Supongamos que 'data' tiene la estructura adecuada
-        dataxth6 = data.data.languages; // Cambia 'labels' según tu estructura JSON
-        datayth6 = data.data.count_times.map(Number); // Cambia 'votes' según tu estructura JSON
+        dataxth6 = data.data.themes; // Cambia 'labels' según tu estructura JSON
+        datayth6 = data.data.number_of_movies.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(th6, {
+        new Chart(th4, {
             type: 'bar',
             data: {
                 labels: dataxth6,
@@ -621,31 +621,44 @@ fetch('http://localhost:8000/movies/language/themesMoreRepxLanguage') // Cambia 
     })
     .catch(error => console.error('Error:', error));
 
-new Chart(ra1, {
-    type: 'bar',
-    data: {
-    labels: dataxra1,
-    datasets: [{
-        label: '# of Votes',
-        data: datayra1,
-        borderWidth: 1
-    }]
-    },
-    options: {
-    scales: {
-        y: {
-        beginAtZero: true
-        }
-    }
-    }
-});
+fetch('http://localhost:8000/movies/bestratingpromxTheme') // Cambia la URL según tu configuración
+    .then(response => response.json())
+    .then(data => {
+        // Supongamos que 'data' tiene la estructura adecuada
+
+        dataxra1 = data.data.themes; // Cambia 'labels' según tu estructura JSON
+        datayra1 = data.data.avg_rating.map(Number); // Cambia 'votes' según tu estructura JSON
+
+        
+        // Crea la gráfica después de llenar las listas
+        new Chart(ra6, {
+            type: 'bar',
+            data: {
+                labels: dataxra1,
+                datasets: [{
+                    label: '# of Votes',
+                    data: datayra1,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    })
+    .catch(error => console.error('Error:', error));
 
 fetch('http://localhost:8000/movies/director/bestratingpromxDirector') // Cambia la URL según tu configuración
     .then(response => response.json())
     .then(data => {
         // Supongamos que 'data' tiene la estructura adecuada
-        dataxra2 = data.data.ratings; // Cambia 'labels' según tu estructura JSON
+        dataxra2 = data.data.directors; // Cambia 'labels' según tu estructura JSON
         datayra2 = data.data.rating_prom.map(Number); // Cambia 'votes' según tu estructura JSON
+        
         // Crea la gráfica después de llenar las listas
         new Chart(ra2, {
             type: 'bar',
@@ -673,9 +686,9 @@ fetch('http://localhost:8000/movies/actor/bestratingpromxactor') // Cambia la UR
     .then(data => {
         // Supongamos que 'data' tiene la estructura adecuada
         dataxra3 = data.data.actors; // Cambia 'labels' según tu estructura JSON
-        datayra3 = data.data.rating; // Cambia 'votes' según tu estructura JSON
+        datayra3 = data.data.rating.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(ra3, {
+        new Chart(ra1, {
             type: 'bar',
             data: {
                 labels: dataxra3,
@@ -731,7 +744,7 @@ fetch('http://localhost:8000/movies/genre/bestratingpromxGenre') // Cambia la UR
         dataxra5 = data.data.genres; // Cambia 'labels' según tu estructura JSON
         datayra5 = data.data.rating_prom.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(ra5, {
+        new Chart(ra3, {
             type: 'bar',
             data: {
                 labels: dataxra5,
@@ -759,7 +772,7 @@ fetch('http://localhost:8000/movies/language/bestratingpromxlanguage') // Cambia
         dataxra6 = data.data.languages; // Cambia 'labels' según tu estructura JSON
         datayra6 = data.data.rating_prom.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(ra6, {
+        new Chart(ra5, {
             type: 'bar',
             data: {
                 labels: dataxra6,
@@ -845,7 +858,7 @@ fetch('http://localhost:8000/movies/country/themesMoreRepxCountry') // Cambia la
         dataxot3 = data.countries; // Cambia 'labels' según tu estructura JSON
         datayot3 = data.count_times.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(ot3, {
+        new Chart(ot4, {
             type: 'bar',
             data: {
                 labels: dataxot3,
@@ -873,7 +886,7 @@ fetch('http://localhost:8000/movies/country/bestratingpromxCountry') // Cambia l
         dataxot4 = data.countries; // Cambia 'labels' según tu estructura JSON
         datayot4 = data.rating_prom.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(ot4, {
+        new Chart(ot3, {
             type: 'bar',
             data: {
                 labels: dataxot4,
@@ -894,42 +907,60 @@ fetch('http://localhost:8000/movies/country/bestratingpromxCountry') // Cambia l
     })
     .catch(error => console.error('Error:', error));
 
-new Chart(ot5, {
-    type: 'bar',
-    data: {
-    labels: dataxot5,
-    datasets: [{
-        label: '# of Votes',
-        data: datayot5,
-        borderWidth: 1
-    }]
-    },
-    options: {
-    scales: {
-        y: {
-        beginAtZero: true
-        }
-    }
-    }
-});
+fetch('http://localhost:8000/movies/language/themesMoreRepxLanguage') // Cambia la URL según tu configuración
+    .then(response => response.json())
+    .then(data => {
+        // Supongamos que 'data' tiene la estructura adecuada
+        dataxth6 = data.data.languages; // Cambia 'labels' según tu estructura JSON
+        datayth6 = data.data.count_times.map(Number); // Cambia 'votes' según tu estructura JSON
+        // Crea la gráfica después de llenar las listas
+        new Chart(ot5, {
+            type: 'bar',
+            data: {
+                labels: dataxth6,
+                datasets: [{
+                    label: '# of Votes',
+                    data: datayth6,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    })
+    .catch(error => console.error('Error:', error));
 
-new Chart(ot6, {
-    type: 'bar',
-    data: {
-    labels: dataxot6,
-    datasets: [{
-        label: '# of Votes',
-        data: datayot6,
-        borderWidth: 1
-    }]
-    },
-    options: {
-    scales: {
-        y: {
-        beginAtZero: true
-        }
-    }
-    }
-});
+fetch('http://localhost:8000/movies/moviesbyrating') // Cambia la URL según tu configuración
+    .then(response => response.json())
+    .then(data => {
+        // Supongamos que 'data' tiene la estructura adecuada
+        dataxot6 = data.data.ratings; // Cambia 'labels' según tu estructura JSON
+        datayot6 = data.data.number_of_movies.map(Number); // Cambia 'votes' según tu estructura JSON
+        // Crea la gráfica después de llenar las listas
+        new Chart(ot6, {
+            type: 'bar',
+            data: {
+                labels: dataxot6,
+                datasets: [{
+                    label: '# of Votes',
+                    data: datayot6,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    })
+    .catch(error => console.error('Error:', error));
 
 
