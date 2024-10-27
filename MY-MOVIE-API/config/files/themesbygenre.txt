@@ -2,17 +2,17 @@ Drama,Western frontier dramas with a touch of humor,84
 Comedy,Student coming-of-age challenges,194
 Animation,Dazzling vocal performances and musicals,91
 Family,Faith and spiritual journeys,21
-Romance,Brutal, violent prison drama,25
-Thriller,Gory, gruesome, and slasher horror,1514
+Romance Brutal, violent prison drama,25
+Thriller Gory, gruesome and slasher horror,1514
 Drama,Crude humor and satire,848
 Crime,Racism and the powerful fight for justice,99
 Science Fiction,Heists and thrilling action,24
 Music,Amusing jokes and witty satire,61
-Comedy,Brutal, violent prison drama,28
+Comedy Brutal, violent prison drama,28
 Documentary,Emotional teen coming-of-age stories,25
 Drama,Laugh-out-loud relationship entanglements,898
 Comedy,Military combat and heroic soldiers,62
-Action,Violent action, guns, and crime,1014
+Action Violent action, guns and crime,1014
 Comedy,Holiday joy and heartwarming Christmas,415
 Animation,Charming romances and delightful chemistry,7
 Mystery,Imaginative space odysseys and alien encounters,52
@@ -43,7 +43,7 @@ Music,Catchy songs and hilarious musical comedy,336
 War,High speed and special ops,46
 Action,Laugh-out-loud relationship entanglements,150
 Adventure,Relationship comedy,80
-History,Dreamlike, quirky, and surreal storytelling,12
+History Dreamlike, quirky and surreal storytelling,12
 Documentary,Passion and romance,2
 Adventure,Charming romances and delightful chemistry,54
 History,Passion and romance,138

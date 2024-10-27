@@ -22,12 +22,12 @@ Twi,3.5233333333333334
 Western Frisian,3.17
 Welsh,3.2122580645161287
 Armenian,3.5179545454545447
-Luxembourgish, Letzeburgesch,3.258
+Luxembourgish Letzeburgesch,3.258
 Cantonese,3.3478105696636953
 Indonesian,3.1988313413014637
 Tigrinya,3.42
 Swedish,3.34238095238095
-Tibetan Standard, Tibetan, Central,3.377500000000001
+Tibetan Standard Tibetan Central,3.377500000000001
 Hebrew (modern),3.4092016806722687
 Guaraní,3.4248000000000007
 Japanese,3.4328559350693326
@@ -36,15 +36,15 @@ Persian (Farsi),3.0991272727272756
 Tahitian,3.4524999999999997
 Tatar,3.7
 Akan,3.448571428571429
-Ossetian, Ossetic,3.49
-Limburgish, Limburgan, Limburger,3.46
+Ossetian Ossetic,3.49
+Limburgish Limburgan Limburger,3.46
 Slovene,3.4160606060606065
 Tamil,3.187558333333337
 Somali,3.560526315789474
 Inupiaq,3.1833333333333336
 Czech,3.3849240780911023
 Wolof,3.5696
-Kalaallisut, Greenlandic,3.185
+Kalaallisut Greenlandic,3.185
 Portuguese,3.3096623902768445
 Norwegian,3.2731810490693762
 Danish,3.300950520833346

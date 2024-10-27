@@ -16,7 +16,7 @@ Bambara,48
 Bashkir,17
 Basque,236
 Belarusian,81
-Bengali, Bangla,3357
+Bengali Bangla,3357
 Bislama,7
 Bosnian,471
 Breton,17
@@ -26,7 +26,7 @@ Cantonese,5830
 Catalan,1044
 Chamorro,4
 Chechen,30
-Chichewa, Chewa, Nyanja,17
+Chichewa Chewa Nyanja,17
 Chinese,19360
 Chuvash,4
 Cornish,12
@@ -35,10 +35,10 @@ Cree,62
 Croatian,811
 Czech,6993
 Danish,4185
-Divehi, Dhivehi, Maldivian,40
+Divehi Dhivehi Maldivian,40
 Dutch,5785
 Dzongkha,27
-Eastern Punjabi, Eastern Panjabi,829
+Eastern Punjabi Eastern Panjabi,829
 English,291652
 Esperanto,36
 Estonian,743
@@ -47,4 +47,4 @@ Faroese,33
 Fijian,3
 Finnish,2732
 French,43571
-Fula, Fulah, Pulaar, Pular,20
+Fula Fulah Pulaar Pular,20

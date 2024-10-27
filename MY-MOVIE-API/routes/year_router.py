@@ -17,7 +17,7 @@ async def get_movies_by_year() -> dict:
     # Open the file in the specified directory
     name_file = "yearbymovies"
     years = []
-    numbers_of_movies = []
+    number_of_movies = []
     data = []
     file_path = f"config/files/{name_file}.txt"
     if not os.path.exists(file_path):
@@ -27,10 +27,10 @@ async def get_movies_by_year() -> dict:
         data = read_from_file(file_path)
     for row in data:
         years.append(row[0])
-        numbers_of_movies.append(row[1])
+        number_of_movies.append(row[1])
     information = {
         "years": years,
-        "numbers_of_movies": numbers_of_movies
+        "number_of_movies": number_of_movies
     }
     return {"data": information}
 
@@ -47,7 +47,7 @@ async def get_movies_by_year() -> dict:
     # Open the file in the specified directory
     name_file = "yearbymoviestop10desc"
     years = []
-    numbers_of_movies = []
+    number_of_movies = []
     data = []
     file_path = f"config/files/{name_file}.txt"
     if not os.path.exists(file_path):
@@ -57,10 +57,10 @@ async def get_movies_by_year() -> dict:
         data = read_from_file(file_path)
     for row in data:
         years.append(row[0])
-        numbers_of_movies.append(row[1])
+        number_of_movies.append(row[1])
     information = {
         "years": years,
-        "numbers_of_movies": numbers_of_movies
+        "number_of_movies": number_of_movies
     }
     return {"data": information}
 
@@ -76,7 +76,7 @@ async def get_movies_by_year() -> dict:
     # Open the file in the specified directory
     name_file = "yearbymoviestop10asc"
     years = []
-    numbers_of_movies = []
+    number_of_movies = []
     data = []
     file_path = f"config/files/{name_file}.txt"
     if not os.path.exists(file_path):
@@ -86,10 +86,10 @@ async def get_movies_by_year() -> dict:
         data = read_from_file(file_path)
     for row in data:
         years.append(row[0])
-        numbers_of_movies.append(row[1])
+        number_of_movies.append(row[1])
     information = {
         "years": years,
-        "numbers_of_movies": numbers_of_movies
+        "number_of_movies": number_of_movies
     }
     return {"data": information}
 
@@ -105,7 +105,7 @@ async def get_cant_actors_by_year() -> dict:
     # Open the file in the specified directory
     name_file = "cantactorsbyyear"
     years = []
-    numbers_of_actors = []
+    number_of_actors = []
     data = []
     file_path = f"config/files/{name_file}.txt"
     if not os.path.exists(file_path):
@@ -115,10 +115,10 @@ async def get_cant_actors_by_year() -> dict:
         data = read_from_file(file_path)
     for row in data:
         years.append(row[0])
-        numbers_of_actors.append(row[1])
+        number_of_actors.append(row[1])
     information = {
         "years": years,
-        "numbers_of_actors": numbers_of_actors
+        "number_of_actors": number_of_actors
     }
     return {"data": information}
 
@@ -135,7 +135,7 @@ async def cant_actors_by_year() -> dict:
     # Open the file in the specified directory
     name_file = "cantactorsbyyeartop10desc"
     years = []
-    numbers_of_actors = []
+    number_of_actors = []
     data = []
     file_path = f"config/files/{name_file}.txt"
     if not os.path.exists(file_path):
@@ -145,10 +145,10 @@ async def cant_actors_by_year() -> dict:
         data = read_from_file(file_path)
     for row in data:
         years.append(row[0])
-        numbers_of_actors.append(row[1])
+        number_of_actors.append(row[1])
     information = {
         "years": years,
-        "numbers_of_actors": numbers_of_actors
+        "number_of_actors": number_of_actors
     }
     return {"data": information}
 
@@ -165,7 +165,7 @@ async def cant_actors_by_year() -> dict:
     # Open the file in the specified directory
     name_file = "cantactorsbyyeartop10asc"
     years = []
-    numbers_of_actors = []
+    number_of_actors = []
     data = []
     file_path = f"config/files/{name_file}.txt"
     if not os.path.exists(file_path):
@@ -175,10 +175,10 @@ async def cant_actors_by_year() -> dict:
         data = read_from_file(file_path)
     for row in data:
         years.append(row[0])
-        numbers_of_actors.append(row[1])
+        number_of_actors.append(row[1])
     information = {
         "years": years,
-        "numbers_of_actors": numbers_of_actors
+        "number_of_actors": number_of_actors
     }
     return {"data": information}
 
@@ -284,7 +284,7 @@ async def get_themes_more_rep_by_year() -> dict:
     name_file = "themesmorerepbyyear"
     years = []
     themes = []
-    numbers_of_times = []
+    count_times = []
     data = []
     file_path = f"config/files/{name_file}.txt"
     if not os.path.exists(file_path):
@@ -295,11 +295,11 @@ async def get_themes_more_rep_by_year() -> dict:
     for row in data:
         years.append(row[0])
         themes.append(row[1])
-        numbers_of_times.append(row[2])
+        count_times.append(row[2])
     information = {
         "years": years,
         "themes": themes,
-        "numbers_of_times": numbers_of_times
+        "count_times": count_times
     }
     return {"data": information}
 
@@ -317,7 +317,7 @@ async def get_themes_more_rep_by_year() -> dict:
     name_file = "themesmorerepbyyeartop10desc"
     years = []
     themes = []
-    numbers_of_times = []
+    count_times = []
     data = []
     file_path = f"config/files/{name_file}.txt"
     if not os.path.exists(file_path):
@@ -328,11 +328,11 @@ async def get_themes_more_rep_by_year() -> dict:
     for row in data:
         years.append(row[0])
         themes.append(row[1])
-        numbers_of_times.append(row[2])
+        count_times.append(row[2])
     information = {
         "years": years,
         "themes": themes,
-        "numbers_of_times": numbers_of_times
+        "count_times": count_times
     }
     return {"data": information}
 
@@ -350,7 +350,7 @@ async def get_themes_more_rep_by_year() -> dict:
     name_file = "themesmorerepbyyeartop10asc"
     years = []
     themes = []
-    numbers_of_times = []
+    count_times = []
     data = []
     file_path = f"config/files/{name_file}.txt"
     if not os.path.exists(file_path):
@@ -361,10 +361,10 @@ async def get_themes_more_rep_by_year() -> dict:
     for row in data:
         years.append(row[0])
         themes.append(row[1])
-        numbers_of_times.append(row[2])
+        count_times.append(row[2])
     information = {
         "years": years,
         "themes": themes,
-        "numbers_of_times": numbers_of_times
+        "count_times": count_times
     }
     return {"data": information}

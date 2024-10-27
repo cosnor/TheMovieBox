@@ -7,7 +7,7 @@ Chinese,Action comedy and silly heroics,61
 Croatian,Action comedy and silly heroics,1
 Czech,Action comedy and silly heroics,7
 Dutch,Action comedy and silly heroics,5
-Eastern Punjabi, Eastern Panjabi,Action comedy and silly heroics,2
+Eastern Punjabi Eastern Panjabi,Action comedy and silly heroics,2
 English,Action comedy and silly heroics,1357
 Esperanto,Action comedy and silly heroics,1
 Finnish,Action comedy and silly heroics,1
@@ -41,7 +41,7 @@ Romanian,Action comedy and silly heroics,2
 Russian,Action comedy and silly heroics,56
 Samoan,Action comedy and silly heroics,1
 Sanskrit (Sa?sk?ta),Action comedy and silly heroics,1
-Scottish Gaelic, Gaelic,Action comedy and silly heroics,1
+Scottish Gaelic Gaelic,Action comedy and silly heroics,1
 Serbian,Action comedy and silly heroics,1
 Slovak,Action comedy and silly heroics,1
 Spanish,Action comedy and silly heroics,112

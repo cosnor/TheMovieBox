@@ -6,5 +6,5 @@ Mari,1
 Mayan,1
 Ndonga,1
 Nuosu,1
-Old Church Slavonic, Church Slavonic, Old Bulgarian,1
+Old Church Slavonic Church Slavonic Old Bulgarian,1
 Southern Ndebele,1

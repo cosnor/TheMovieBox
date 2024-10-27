@@ -4,13 +4,13 @@
 !Boomer,2
 !W.A.R.: !Women Art Revolution,20
 "...damit ich meinen Frieden hab" - 15 Monate beim Bund,3
-"...és Mészöly Kálmán, a kapitány",1
+"...és Mészöly Kálmán a kapitány",1
 "?a?a??" µe? t? ??? µ??,9
 "16" and 10 years. Far away.,4
 "1-O",7
 "Amerika" vor Augen oder Kafka in 43 Min. 30 Sec.,4
-"And So, It Goes",2
-"Annie, Are You OK?",5
+"And So It Goes",2
+"Annie Are You OK?",5
 "B" as Jazz,1
 "Bark",1
 "BLESSED",19
