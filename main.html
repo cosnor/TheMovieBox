@@ -32,7 +32,7 @@
                 <h1>Pasos</h1>
             </article>
             <article class="film">
-                <div class="roll slide">
+                <div class="roll">
                     <div class="roll-item">
                         <div class="horizontal-bar">
                             <div class="rectangle"></div>
@@ -67,8 +67,8 @@
                                 <h3>
                                     Paso 2
                                 </h3>
-                                <p>Muévete con las flechas laterales hasta seleccionar el grupo de datos deseado. 
-                                    Si te interesa alguno, haz clic al botón de ver más. </p>
+                                <p>Muévete con el menú inferior hasta seleccionar el grupo de datos deseado. 
+                                    Si te interesa alguno, haz clic al botón play. </p>
                             </div>
                         </div>
                         <div class="horizontal-bar">
@@ -121,145 +121,1681 @@
         </section>
         <section class="data-interface hidden">
             <div class="controls">
-                a
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                
             </div>
-            <div class="node-title">
-                <h1>Cantidad de Películas por...</h1>
-            </div>
-            <div class="nodules-charts hidden">
-                <div class="chart-section hidden">
-                    <div class="chart-section__container">
-                        <div class="filter-section">
-                            <div class="filters-title">
-                                <h1>Productor Ticket</h1>
-                            </div>
-                            <div class="filters">
-                                <h4>Filtra por </h4>
-                                <label class="fil-container"> Filtro 1
-                                    <input type="checkbox" checked="checked">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="fil-container"> Filtro 2
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="fil-container"> Filtro 3
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="fil-container"> Filtro 4
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                                    Dicta enim inventore necessitatibus cumque explicabo, similique 
-                                    sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
-                                    Saepe ipsam ad soluta.</p>
+            <div class="general-carrousel">
+                <!-- <div class="QuantityofMovies"> -->
+                <div class="node-title QuantityofMovies">
+                    <h1>Cantidad de Películas por...</h1>
+                </div>
+                <div class="node-title QuantityofActors hidden">
+                    <h1>Cantidad de Actores por...</h1>
+                </div>
+                <div class="node-title QuantityofRating hidden">
+                    <h1>... con Mejor Rating Promedio</h1>
+                </div>
+                <div class="node-title QuantityofThemes hidden">
+                    <h1>... con Temáticas Más Repetidas</h1>
+                </div>
+                <div class="node-title QuantityofOthers hidden">
+                    <h1>Otras Gráficas</h1>
+                </div>
+                <div class="goto_node hidden">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+                <div class="nodules-charts hidden">
+                    <div class="QuantityofMovies">
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Productor Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="Q1"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="graphic-section">
-                            <i class="fa-solid fa-square-caret-down"></i>
-                            <canvas id="myChart"></canvas>
-                            <div class="filler">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Director Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="Q2"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Year Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="Q3"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Genre Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="Q4"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Language Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="Q5"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Actor Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="Q6"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="QuantityofActors hidden">
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Productor Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="A1"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                
+    
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Director Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="A2"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Year Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="A3"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Genre Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="A4"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Language Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="A5"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Actor Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="A6"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="QuantityofRating hidden">
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Productor Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="R1"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                
+    
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Director Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="R2"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Year Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="R3"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Genre Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="R4"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Language Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="R5"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Actor Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="R6"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="QuantityofThemes hidden">
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Productor Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="T1"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                
+    
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Director Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="T2"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Year Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="T3"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Genre Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="T4"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Language Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="T5"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Actor Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="T6"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="QuantityofOthers hidden">
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Productor Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="O1"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                
+    
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Director Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="O2"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Year Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="O3"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Genre Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="O4"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Language Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="O5"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-section hidden">
+                            <div class="chart-section__container">
+                                <div class="filter-section">
+                                    <div class="filters-title">
+                                        <h1>Actor Ticket</h1>
+                                    </div>
+                                    <div class="filters">
+                                        <h4>Filtra por </h4>
+                                        <label class="fil-container"> Filtro 1
+                                            <input type="checkbox" >
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 2
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 3
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="fil-container"> Filtro 4
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Dicta enim inventore necessitatibus cumque explicabo, similique 
+                                            sed nostrum aliquam, voluptas dignissimos optio error ex iure laborum laudantium? 
+                                            Saepe ipsam ad soluta.</p>
+                                    </div>
+                                </div>
+                                <div class="graphic-section">
+                                    <i class="fa-solid fa-square-caret-down go-back"></i>
+                                    <canvas id="O6"></canvas>
+                                    <div class="filler">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="node-carrusel">
+                    <div class="left-arrow hidden">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    </div>
+                    <div class="right-arrow hidden">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </div>
+                    <div class="node quantityMovies">
+                        <div class="nodule1">
+                            <div class="nodule-content QuantityofMovies hidden">
+                                <h3>Productor</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofActors hidden">
+                                <h3>Películas</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofRating hidden">
+                                <h3>Actores</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofThemes hidden">
+                                <h3>Actores</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofOthers hidden">
+                                <h3>Películas por País</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nodule2">
+                            <div class="nodule-content QuantityofMovies hidden">
+                                <h3>Director</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofActors hidden">
+                                <h3>Con los que ha colaborado cada Director </h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofRating hidden">
+                                <h3>Director</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofThemes hidden">
+                                <h3>Director</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofOthers hidden">
+                                <h3>Actores por País</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nodule3">
+                            <div class="nodule-content QuantityofMovies hidden">
+                                <h3>Actor</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofActors hidden">
+                                <h3>Con los que ha trabajado cada Productora</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofRating hidden">
+                                <h3>Géneros</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofThemes hidden">
+                                <h3>Productor</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofOthers hidden">
+                                <h3>Paises con Mayor Rating</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
 
+                        </div>
+                        <div class="nodule4">
+                            <div class="nodule-content QuantityofMovies hidden">
+                                <h3>Año</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofActors hidden">
+                                <h3>Año</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofRating hidden">
+                                <h3>Años</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofThemes hidden">
+                                <h3>Temáticas</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofOthers hidden">
+                                <h3>Países con temáticas más repetidas</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nodule5">
+                            <div class="nodule-content QuantityofMovies hidden">
+                                <h3>Género</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofActors hidden">
+                                <h3>Género</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofRating hidden">
+                                <h3>Idiomas</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofThemes hidden">
+                                <h3>Géneros</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofOthers hidden">
+                                <h3>Idiomas con temáticas más repetidas</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nodule6">
+                            <div class="nodule-content QuantityofMovies hidden">
+                                <h3>Idioma</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofActors hidden">
+                                <h3>Idioma</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofRating hidden">
+                                <h3>Temáticas</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofThemes hidden">
+                                <h3>Años</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                            <div class="nodule-content QuantityofOthers hidden">
+                                <h3>Tierlist de Películas por rango de rating</h3>
+                                <figure>
+                                    <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
+                                    <figcaption>Vista Previa</figcaption>
+                                </figure>
+                                <div class="ver-mas">
+                                    Ver Más
+                                </div>
+                            </div>
+                        </div>
+                        <div class="show-more">
+                            <i class="fa fa-play" aria-hidden="true"></i>
+                        </div>
                     </div>
                 </div>
+                </div>
+                
+                
             </div>
-            <div class="node-carrusel">
-                <div class="left-arrow hidden">
-                    <i class="fa fa-angle-left" aria-hidden="true"></i>
-                </div>
-                <div class="right-arrow hidden">
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                </div>
-                <div class="node quantityMovies">
-                    <div class="nodule1">
-                        <div class="nodule-content hidden">
-                            <h3>Productor</h3>
-                            <figure>
-                                <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
-                                <figcaption>Vista Previa</figcaption>
-                            </figure>
-                            <div class="ver-mas">
-                                Ver Más
-                            </div>
-                        </div>
-                    </div>
-                    <div class="nodule2">
-                        <div class="nodule-content hidden">
-                            <h3>Director</h3>
-                            <figure>
-                                <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
-                                <figcaption>Vista Previa</figcaption>
-                            </figure>
-                            <div class="ver-mas">
-                                Ver Más
-                            </div>
-                        </div>
-                    </div>
-                    <div class="nodule3">
-                        <div class="nodule-content hidden">
-                            <h3>Año</h3>
-                            <figure>
-                                <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
-                                <figcaption>Vista Previa</figcaption>
-                            </figure>
-                            <div class="ver-mas">
-                                Ver Más
-                            </div>
-                        </div>
-                    </div>
-                    <div class="nodule4">
-                        <div class="nodule-content hidden">
-                            <h3>Género</h3>
-                            <figure>
-                                <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
-                                <figcaption>Vista Previa</figcaption>
-                            </figure>
-                            <div class="ver-mas">
-                                Ver Más
-                            </div>
-                        </div>
-                    </div>
-                    <div class="nodule5">
-                        <div class="nodule-content hidden">
-                            <h3>Lenguaje</h3>
-                            <figure>
-                                <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
-                                <figcaption>Vista Previa</figcaption>
-                            </figure>
-                            <div class="ver-mas">
-                                Ver Más
-                            </div>
-                        </div>
-                    </div>
-                    <div class="nodule6">
-                        <div class="nodule-content hidden">
-                            <h3>Actor</h3>
-                            <figure>
-                                <img src="assets/the_movie_box_logo.svg" alt="Cantidad de Películas por...">
-                                <figcaption>Vista Previa</figcaption>
-                            </figure>
-                            <div class="ver-mas">
-                                Ver Más
-                            </div>
-                        </div>
-                    </div>
-                    <div class="show-more">
-                        <i class="fa fa-play" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </div>
+            
         </section>
         <footer>
+            <div class="footer-container">
+                <ul>
+                    <li id="node1Selection" class="selected">1</li>
+                    <li id="node2Selection">2</li>
+                    <li id="node3Selection">3</li>
+                    <li id="node4Selection">4</li>
+                    <li id="node5Selection">5</li>
+                </ul>
+            </div>
         </footer>
     </main>
 </body>

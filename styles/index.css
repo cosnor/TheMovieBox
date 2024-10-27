@@ -29,6 +29,25 @@ body{
     width: 50vw;
 }
 
+.description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 5%;
+    left: 30%;
+    right: 30%;
+}
+
+.description p{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.2rem;
+    color: var(--light-secondary-color);
+    text-align: center;
+    font-style: italic;
+}
+
 .help{
     display: flex;
     position: relative;

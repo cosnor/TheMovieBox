@@ -1,4 +1,4 @@
-
+w
 
 def write_to_file(file_path: str, data_query) -> None:
     data = []
