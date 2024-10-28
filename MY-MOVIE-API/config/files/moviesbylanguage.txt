@@ -2,7 +2,7 @@ English,473068
 Nauruan,3
 Venda,4
 Chechen,44
-Kwanyama, Kuanyama,1
+Kwanyama Kuanyama,1
 Hausa,72
 Zulu,280
 Southern Sotho,49
@@ -23,7 +23,7 @@ Amharic,296
 Norwegian Nynorsk,17
 Cree,113
 Uzbek,193
-Zhuang, Chuang,4
+Zhuang Chuang,4
 Estonian,1400
 Moldavian,131
 Twi,33
@@ -31,12 +31,12 @@ Western Frisian,23
 Welsh,232
 Armenian,612
 Oriya,1149
-Luxembourgish, Letzeburgesch,102
+Luxembourgis Letzeburgesch,102
 Cantonese,7380
 Indonesian,5341
 Tigrinya,32
 Swedish,10068
-Tibetan Standard, Tibetan, Central,224
+Tibetan Standard Tibetan Central,224
 Hebrew (modern),3947
 Guaraní,170
 Japanese,45287
@@ -45,6 +45,6 @@ Persian (Farsi),4981
 Tahitian,18
 Tatar,36
 Akan,39
-Ossetian, Ossetic,12
+Ossetian Ossetic,12
 Northern Ndebele,6
-Limburgish, Limburgan, Limburger,8
+Limburgish Limburgan Limburger,8

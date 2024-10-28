@@ -1,10 +1,10 @@
 English,Crude humor and satire,4308
 English,Moving relationship stories,3898
-English,Horror, the undead and monster classics,3865
-English,Gags, jokes, and slapstick humor,3350
+English,Horror the undead and monster classics,3865
+English,Gags jokes and slapstick humor,3350
 English,Twisted dark psychological thriller,3336
-English,Gory, gruesome, and slasher horror,3128
-English,Terrifying, haunted, and supernatural horror,2850
+English,Gory gruesome and slasher horror,3128
+English,Terrifying haunted and supernatural horror,2850
 English,Laugh-out-loud relationship entanglements,2677
 English,Funny jokes and crude humor,2612
 English,Touching and sentimental family stories,2588

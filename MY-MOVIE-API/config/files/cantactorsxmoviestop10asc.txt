@@ -1,4 +1,4 @@
-"...és Mészöly Kálmán, a kapitány",1
+"...és Mészöly Kálmán a kapitány",1
 "B" as Jazz,1
 "Bark",1
 "CELEBRATION" tour 2018,1

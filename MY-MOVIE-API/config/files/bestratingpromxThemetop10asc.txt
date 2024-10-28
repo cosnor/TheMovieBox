@@ -1,10 +1,10 @@
-Sci-fi horror, creatures, and aliens,2.697945823927761
+Sci-fi horror creatures and aliens,2.697945823927761
 Sci-fi monster and dinosaur adventures,2.7314767932489428
 Survival horror and zombie carnage,2.7387136929460607
 Bloody vampire horror,2.7702583025830223
 Extreme gory horror and cannibalism,2.7781321839080477
-Horror, the undead and monster classics,2.8281417889781215
-Gory, gruesome, and slasher horror,2.8326227347611166
+Horror the undead and monster classics,2.8281417889781215
+Gory gruesome and slasher horror,2.8326227347611166
 Chilling experiments and classic monster horror,2.8465633423180576
 Action comedy and silly heroics,2.859239412273123
 Dangerous technology and the apocalypse,2.8647939262472875

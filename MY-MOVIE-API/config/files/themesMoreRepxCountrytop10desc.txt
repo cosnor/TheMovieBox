@@ -1,10 +1,10 @@
 USA,Moving relationship stories,6158
 USA,Crude humor and satire,5592
-USA,Horror, the undead and monster classics,5274
+USA,Horror the undead and monster classics,5274
 USA,Twisted dark psychological thriller,4792
 France,Moving relationship stories,4475
-USA,Gory, gruesome, and slasher horror,4255
+USA,Gory gruesome and slasher horror,4255
 France,Crude humor and satire,4224
-USA,Gags, jokes, and slapstick humor,4211
-USA,Terrifying, haunted, and supernatural horror,4044
+USA,Gags jokes and slapstick humor,4211
+USA,Terrifying haunted and supernatural horror,4044
 USA,Touching and sentimental family stories,3998

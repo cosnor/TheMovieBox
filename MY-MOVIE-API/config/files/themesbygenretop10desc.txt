@@ -1,9 +1,9 @@
 Drama,Moving relationship stories,3627
 Comedy,Crude humor and satire,3590
-Horror,Horror, the undead and monster classics,3503
-Horror,Gory, gruesome, and slasher horror,2901
-Comedy,Gags, jokes, and slapstick humor,2859
-Horror,Terrifying, haunted, and supernatural horror,2465
+Horror,Horror the undead and monster classics,3503
+Horror,Gory gruesome and slasher horror,2901
+Comedy,Gags jokes and slapstick humor,2859
+Horror,Terrifying haunted and supernatural horror,2465
 Drama,Touching and sentimental family stories,2331
 Comedy,Laugh-out-loud relationship entanglements,2265
 Comedy,Funny jokes and crude humor,2235
