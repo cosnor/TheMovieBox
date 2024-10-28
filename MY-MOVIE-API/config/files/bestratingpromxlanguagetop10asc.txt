@@ -7,4 +7,4 @@ Malagasy,3.05
 Persian (Farsi),3.0991272727272756
 Telugu,3.1255525606469026
 Western Frisian,3.17
-Scottish Gaelic, Gaelic,3.181785714285714
+Scottish Gaelic Gaelic,3.181785714285714

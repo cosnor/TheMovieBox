@@ -56,7 +56,7 @@ let dataxac1 = [] //productor
 let datayac1 = []
 let dataxac2 = [] //director
 let datayac2 = []
-let dataxac3 = [] //actor
+let dataxac3 = [] //peliculas
 let datayac3 = []
 let dataxac4 = [] //year
 let datayac4 = []
@@ -106,31 +106,26 @@ let datayot6 = []
 
 // Instancias de las gráficas
 let chartInstances = {
-    q1: "",
-    q2: "",
-    q3: "",
-    q4: "",
-    q5: "",
-    q6: ""
+    q1: "", q2: "", q3: "", q4: "", q5: "", q6: "", a1: "", a2: "", a3: "", a4: "", a5: "", a6: "", t1: "", t2: "", t3: "", t4: "", t5: "", t6: "", r1: "", r2: "", r3: "", r4: "", r5: "", r6: "", o1: "", o2: "", o3: "", o4: "", o5: "", o6: ""
 };
 
 // Diccionario, para saber qué filtro corresponde a qué gráfica
 const filterToChart = {
-    'q1' : qm3, 'q2' : qm2, 'q3' : qm1, 'q4' : qm4,'q5' : qm5, 'q6' : qm6, 'a1' : ac1,
+    'q1' : qm3, 'q2' : qm2, 'q3' : qm1, 'q4' : qm4,'q5' : qm5, 'q6' : qm6, 'a1' : ac3,
     'a2' : ac2,
-    'a3' : ac3,
+    'a3' : ac1,
     'a4' : ac4,
     'a5' : ac5,
     'a6' : ac6,
-    't1' : th1,
+    't1' : th3,
     't2' : th2,
-    't3' : th3,
+    't3' : th1,
     't4' : th4,
     't5' : th5,
     't6' : th6,
-    'r1' : ra1,
+    'r1' : ra3,
     'r2' : ra2,
-    'r3' : ra3,
+    'r3' : ra1,
     'r4' : ra4,
     'r5' : ra5,
     'r6' : ra6,
@@ -148,7 +143,10 @@ const filterToChart = {
 const claseToSufixAsc = {
 
     'q1 asc' : 'actor/top10asc', 'q1 des' : 'actor/top10desc', 'q2 asc' : 'director/top10asc', 'q2 des' : 'director/top10desc', 'q3 asc' : 'productor/top10asc', 'q3 des' : 'productor/top10desc', 'q4 asc' : 'year/top10asc', 'q4 des' : 'year/top10desc', 'q5 asc' : 'genre/top10asc', 'q5 des' : 'genre/top10desc', 'q6 asc' : 'language/top10asc', 'q6 des' : 'language/top10desc',
-
+    'a1 asc' : 'productor/cantActorsxproductor/top10asc', 'a1 des' : 'productor/cantActorsxproductor/top10desc', 'a2 asc' : 'director/cantActorsxDirector/top10asc', 'a2 des' : 'director/cantActorsxDirector/top10desc', 'a3 asc' : 'actor/cantActorsxMovies/top10asc', 'a3 des' : 'actor/cantActorsxMovies/top10desc', 'a4 asc' : 'year/cantActorsxYear/top10asc', 'a4 des' : 'year/cantActorsxYear/top10desc', 'a5 asc' : 'genre/cantActorsxGenre/top10asc', 'a5 des' : 'genre/cantActorsxGenre/top10desc', 'a6 asc' : 'language/cantActorsxLanguage/top10asc', 'a6 des' : 'language/cantActorsxLanguage/top10desc',
+    'r3 asc' : 'actor/bestratingpromxactor/top10asc', 'r3 des' : 'actor/bestratingpromxactor/top10desc', 'r2 asc' : 'director/bestratingpromxDirector/top10asc', 'r2 des' : 'director/bestratingpromxDirector/top10desc', 'r1 asc' : 'genre/bestratingpromxGenre/top10asc', 'r1 des' : 'genre/bestratingpromxGenre/top10desc', 'r4 asc' : 'year/bestratingpromxYear/top10asc', 'r4 des' : 'year/bestratingpromxYear/top10desc', 'r5 asc' : 'language/bestratingpromxlanguage/top10asc', 'r5 des' : 'language/bestratingpromxlanguage/top10desc', 'r6 asc' : 'bestratingpromxTheme/top10asc', 'r6 des' : 'bestratingpromxTheme/top10desc',
+    't3 asc' : 'actor/themesMoreRepxactor/top10asc', 't3 des' : 'actor/themesMoreRepxactor/top10desc', 't2 asc' : 'director/themesMoreRepxDirector/top10asc', 't2 des' : 'director/themesMoreRepxDirector/top10desc', 't1 asc' : 'productor/themesMoreRepxproductor/top10asc', 't1 des' : 'productor/themesMoreRepxproductor/top10desc', 't4 asc' : 'year/themesMoreRepxYear/top10asc', 't4 des' : 'year/themesMoreRepxYear/top10desc', 't5 asc' : 'genre/themesMoreRepxGenre/top10asc', 't5 des' : 'genre/themesMoreRepxGenre/top10desc', 't6 asc' : 'themeMoreRepet/top10asc', 't6 des' : 'themeMoreRepet/top10desc',
+    'o5 asc' : 'language/themesMoreRepxLanguage/top10asc', 'o5 des' : 'language/themesMoreRepxLanguage/top10desc'
 }
 
 const checkboxes = document.querySelectorAll('input[type=checkbox]');
@@ -166,16 +164,14 @@ checkboxes.forEach((checkbox) => {
         if (checked) {            
             let chartId = clase.slice(0, 2);
             // Si la gráfica ya existe, la destruye
+            console.log(chartId);
             if (chartInstances[chartId]) {
-
                 chartInstances[chartId].destroy();
             }
             // Obtiene la variable para la URL
-            console.log(clase);
             variable = claseToSufixAsc[clase];
             
             let ruta = `http://localhost:8000/movies/${variable}`
-            console.log(ruta);
             fetch(ruta) // Cambia la URL según tu configuración
             .then(response => response.json())
             .then(data => {
@@ -207,6 +203,83 @@ checkboxes.forEach((checkbox) => {
                         datax = data.data.languages;
                         datay = data.data.number_of_movies.map(Number);
                         break;
+                    case 'a1':
+                        datax = data.data.productors;
+                        datay = data.data.number_of_actors.map(Number);
+                        break;
+                    case 'a2':
+                        datax = data.data.directors;
+                        datay = data.data.number_of_actors.map(Number);
+                        break;
+                    case 'a3':
+                        datax = data.data.actors;
+                        datay = data.data.number_of_movies.map(Number);
+                        break;
+                    case 'a4':
+                        datax = data.data.years;
+                        datay = data.data.number_of_actors.map(Number);
+                        break;
+                    case 'a5':
+                        datax = data.data.genres;
+                        datay = data.data.number_of_actors.map(Number);
+                        break;
+                    case 'a6':
+                        datax = data.data.languages;
+                        datay = data.data.number_of_actors.map(Number);
+                        break;
+                    case 'r1':
+                        
+                        datax = data.data.genres;
+                        datay = data.data.rating_prom.map(Number);
+                        break;
+                    case 'r2':
+                        datax = data.data.directors;
+                        datay = data.data.rating_prom.map(Number);
+                        break;
+                    case 'r3':
+                        datax = data.data.actors;
+                        datay = data.data.rating.map(Number);
+                        break;
+                    case 'r4':
+                        datax = data.data.years;
+                        datay = data.data.rating_prom.map(Number);
+                        break;
+                    case 'r5': 
+                        datax = data.data.languages;
+                        datay = data.data.rating_prom.map(Number);
+                        break;
+                    case 'r6': 
+                        datax = data.data.themes;
+                        datay = data.data.avg_rating.map(Number);
+                        break;
+                    case 't1':
+                        datax = data.data.productors;
+                        datay = data.data.count_times.map(Number);
+                        break;
+                    case 't2':
+                        datax = data.data.directors;
+                        datay = data.data.count_times.map(Number);
+                        break;
+                    case 't3':
+                        datax = data.data.actors;
+                        datay = data.data.count_times.map(Number);
+                        break;
+                    case 't4':
+                        datax = data.data.years;
+                        datay = data.data.count_times.map(Number);
+                        break;
+                    case 't5':
+                        datax = data.data.genres;
+                        datay = data.data.count_times.map(Number);
+                        break;
+                    case 't6':
+                        datax = data.data.themes;
+                        datay = data.data.number_of_movies.map(Number);
+                        break;
+                    case 'o5':
+                        datax = data.data.languages;
+                        datay = data.data.count_times.map(Number);
+                        break;
                 }
                 let chart = filterToChart[chartId];
                 // Crea la gráfica después de llenar las listas
@@ -215,7 +288,7 @@ checkboxes.forEach((checkbox) => {
                     data: {
                         labels: datax,
                         datasets: [{
-                            label: '# of Movies',
+                            label: '#',
                             data: datay,
                             borderWidth: 1,
                             clip: 5
@@ -239,10 +312,6 @@ checkboxes.forEach((checkbox) => {
     });
 });
 
-
-
-
-
 fetch('http://localhost:8000/movies/productor') // Cambia la URL según tu configuración
     .then(response => response.json())
     .then(data => {
@@ -256,7 +325,7 @@ fetch('http://localhost:8000/movies/productor') // Cambia la URL según tu confi
             data: {
                 labels: dataxqm1,
                 datasets: [{
-                    label: '# of Movies',
+                    label: '#',
                     data: datayqm1,
                     borderWidth: 1,
                     clip: 5
@@ -288,7 +357,7 @@ fetch('http://localhost:8000/movies/director') // Cambia la URL según tu config
             data: {
                 labels: dataxqm2,
                 datasets: [{
-                    label: '# of Movies',
+                    label: '#',
                     data: datayqm2,
                     borderWidth: 1
                 }]
@@ -317,7 +386,7 @@ fetch('http://localhost:8000/movies/actor') // Cambia la URL según tu configura
             data: {
             labels: dataxqm3,
             datasets: [{
-                label: '# of Movies',
+                label: '#',
                 data: datayqm3,
                 borderWidth: 1
             }]
@@ -347,7 +416,7 @@ fetch('http://localhost:8000/movies/year') // Cambia la URL según tu configurac
             data: {
                 labels: dataxqm4,
                 datasets: [{
-                    label: '# of Movies',
+                    label: '#',
                     data: datayqm4,
                     borderWidth: 1
                 }]
@@ -376,7 +445,7 @@ fetch('http://localhost:8000/movies/genre') // Cambia la URL según tu configura
             data: {
                 labels: dataxqm5,
                 datasets: [{
-                    label: '# of Movies',
+                    label: '#',
                     data: datayqm5,
                     borderWidth: 1
                 }]
@@ -405,7 +474,7 @@ fetch('http://localhost:8000/movies/language') // Cambia la URL según tu config
             data: {
                 labels: dataxqm6,
                 datasets: [{
-                    label: '# of Movies',
+                    label: '#',
                     data: datayqm6,
                     borderWidth: 1
                 }]
@@ -429,12 +498,12 @@ fetch('http://localhost:8000/movies/productor/cantActorsxproductor') // Cambia l
         dataxac1 = data.data.productors; // Cambia 'labels' según tu estructura JSON
         datayac1 = data.data.number_of_actors.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(ac3, {
+        const ac3c = new Chart(ac3, {
             type: 'bar',
             data: {
                 labels: dataxac1,
                 datasets: [{
-                    label: '# of Votes',
+                    label: '#',
                     data: datayac1,
                     borderWidth: 1
                 }]
@@ -447,6 +516,8 @@ fetch('http://localhost:8000/movies/productor/cantActorsxproductor') // Cambia l
                 }
             }
         });
+        chartInstances.a1 = ac3c;
+
     })
     .catch(error => console.error('Error:', error));
 
@@ -457,12 +528,12 @@ fetch('http://localhost:8000/movies/director/cantActorsxDirector') // Cambia la 
         dataxac2 = data.data.directors; // Cambia 'labels' según tu estructura JSON
         datayac2 = data.data.number_of_actors.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(ac2, {
+        const ac2c = new Chart(ac2, {
             type: 'bar',
             data: {
                 labels: dataxac2,
                 datasets: [{
-                    label: '# of Votes',
+                    label: '#',
                     data: datayac2,
                     borderWidth: 1
                 }]
@@ -475,6 +546,7 @@ fetch('http://localhost:8000/movies/director/cantActorsxDirector') // Cambia la 
                 }
             }
         });
+        chartInstances.a2 = ac2c;
     })
     .catch(error => console.error('Error:', error));
 
@@ -485,12 +557,12 @@ fetch('http://localhost:8000/movies/actor/cantActorxMovies') // Cambia la URL se
         dataxac3 = data.data.actors; // Cambia 'labels' según tu estructura JSON
         datayac3 = data.data.number_of_movies.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(ac1, {
+        const ac1c = new Chart(ac1, {
             type: 'bar',
             data: {
                 labels: dataxac3,
                 datasets: [{
-                    label: '# of Votes',
+                    label: '#',
                     data: datayac3,
                     borderWidth: 1
                 }]
@@ -503,6 +575,7 @@ fetch('http://localhost:8000/movies/actor/cantActorxMovies') // Cambia la URL se
                 }
             }
         });
+        chartInstances.a3 = ac1c;
     })
     .catch(error => console.error('Error:', error));
 
@@ -513,12 +586,12 @@ fetch('http://localhost:8000/movies/year/cantActorsxYear') // Cambia la URL seg�
         dataxac4 = data.data.years; // Cambia 'labels' según tu estructura JSON
         datayac4 = data.data.number_of_actors.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(ac4, {
+        const ac4c = new Chart(ac4, {
             type: 'bar',
             data: {
                 labels: dataxac4,
                 datasets: [{
-                    label: '# of Votes',
+                    label: '#',
                     data: datayac4,
                     borderWidth: 1
                 }]
@@ -531,6 +604,7 @@ fetch('http://localhost:8000/movies/year/cantActorsxYear') // Cambia la URL seg�
                 }
             }
         });
+        chartInstances.a4 = ac4c;
     })
     .catch(error => console.error('Error:', error));
 
@@ -541,12 +615,12 @@ fetch('http://localhost:8000/movies/genre/cantActorsxGenre') // Cambia la URL se
         dataxac5 = data.data.genres; // Cambia 'labels' según tu estructura JSON
         datayac5 = data.data.number_of_actors.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(ac5, {
+        const ac5c = new Chart(ac5, {
             type: 'bar',
             data: {
                 labels: dataxac5,
                 datasets: [{
-                    label: '# of Votes',
+                    label: '#',
                     data: datayac5,
                     borderWidth: 1
                 }]
@@ -559,6 +633,7 @@ fetch('http://localhost:8000/movies/genre/cantActorsxGenre') // Cambia la URL se
                 }
             }
         });
+        chartInstances.a5 = ac5c;
     })
     .catch(error => console.error('Error:', error));
 
@@ -569,12 +644,12 @@ fetch('http://localhost:8000/movies/language/cantActorsxLanguage') // Cambia la 
         dataxac6 = data.data.languages; // Cambia 'labels' según tu estructura JSON
         datayac6 = data.data.number_of_actors.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(ac6, {
+        const ac6c = new Chart(ac6, {
             type: 'bar',
             data: {
                 labels: dataxac6,
                 datasets: [{
-                    label: '# of Votes',
+                    label: '#',
                     data: datayac6,
                     borderWidth: 1
                 }]
@@ -587,6 +662,7 @@ fetch('http://localhost:8000/movies/language/cantActorsxLanguage') // Cambia la 
                 }
             }
         });
+        chartInstances.a6 = ac6c;
     })
     .catch(error => console.error('Error:', error));
 
@@ -597,12 +673,12 @@ fetch('http://localhost:8000/movies/productor/themesMoreRepxproductor') // Cambi
         dataxth1 = data.data.productors; // Cambia 'labels' según tu estructura JSON
         datayth1 = data.data.count_times.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(th3, {
+        const th3x = new Chart(th3, {
             type: 'bar',
             data: {
                 labels: dataxth1,
                 datasets: [{
-                    label: '# of Votes',
+                    label: '#',
                     data: datayth1,
                     borderWidth: 1
                 }]
@@ -615,6 +691,7 @@ fetch('http://localhost:8000/movies/productor/themesMoreRepxproductor') // Cambi
                 }
             }
         });
+        chartInstances.t1 = th3x;
     })
     .catch(error => console.error('Error:', error));
 
@@ -625,12 +702,12 @@ fetch('http://localhost:8000/movies/director/themesMoreRepxDirector') // Cambia 
         dataxth2 = data.data.directors; // Cambia 'labels' según tu estructura JSON
         datayth2 = data.data.count_times.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(th2, {
+        const th2c = new Chart(th2, {
             type: 'bar',
             data: {
                 labels: dataxth2,
                 datasets: [{
-                    label: '# of Votes',
+                    label: '#',
                     data: datayth2,
                     borderWidth: 1
                 }]
@@ -643,6 +720,7 @@ fetch('http://localhost:8000/movies/director/themesMoreRepxDirector') // Cambia 
                 }
             }
         });
+        chartInstances.t2 = th2c;
     })
     .catch(error => console.error('Error:', error));
 
@@ -653,12 +731,12 @@ fetch('http://localhost:8000/movies/actor/themesMoreRepxactor') // Cambia la URL
         dataxth3 = data.data.actors; // Cambia 'labels' según tu estructura JSON
         datayth3 = data.data.count_times.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(th1, {
+        const th1c= new Chart(th1, {
             type: 'bar',
             data: {
                 labels: dataxth3,
                 datasets: [{
-                    label: '# of Votes',
+                    label: '#',
                     data: datayth3,
                     borderWidth: 1
                 }]
@@ -671,6 +749,7 @@ fetch('http://localhost:8000/movies/actor/themesMoreRepxactor') // Cambia la URL
                 }
             }
         });
+        chartInstances.t3 = th1c;
     })
     .catch(error => console.error('Error:', error));
 
@@ -681,12 +760,12 @@ fetch('http://localhost:8000/movies/year/themesMoreRepxYear') // Cambia la URL s
         dataxth4 = data.data.years; // Cambia 'labels' según tu estructura JSON
         datayth4 = data.data.count_times.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(th6, {
+        const th6c = new Chart(th6, {
             type: 'bar',
             data: {
                 labels: dataxth4,
                 datasets: [{
-                    label: '# of Votes',
+                    label: '#',
                     data: datayth4,
                     borderWidth: 1
                 }]
@@ -699,6 +778,7 @@ fetch('http://localhost:8000/movies/year/themesMoreRepxYear') // Cambia la URL s
                 }
             }
         });
+        chartInstances.t6 = th6c;
     })
     .catch(error => console.error('Error:', error));
 
@@ -709,12 +789,12 @@ fetch('http://localhost:8000/movies/genre/themesMoreRepxGenre') // Cambia la URL
         dataxth5 = data.data.genres; // Cambia 'labels' según tu estructura JSON
         datayth5 = data.data.count_times.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(th5, {
+        const th5c = new Chart(th5, {
             type: 'bar',
             data: {
                 labels: dataxth5,
                 datasets: [{
-                    label: '# of Votes',
+                    label: '#',
                     data: datayth5,
                     borderWidth: 1
                 }]
@@ -727,6 +807,7 @@ fetch('http://localhost:8000/movies/genre/themesMoreRepxGenre') // Cambia la URL
                 }
             }
         });
+        chartInstances.t5 = th5c;
     })
     .catch(error => console.error('Error:', error));
 
@@ -737,12 +818,12 @@ fetch('http://localhost:8000/movies/themeMoreRepet') // Cambia la URL según tu 
         dataxth6 = data.data.themes; // Cambia 'labels' según tu estructura JSON
         datayth6 = data.data.number_of_movies.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(th4, {
+        const th4c = new Chart(th4, {
             type: 'bar',
             data: {
                 labels: dataxth6,
                 datasets: [{
-                    label: '# of Votes',
+                    label: '#',
                     data: datayth6,
                     borderWidth: 1
                 }]
@@ -755,6 +836,7 @@ fetch('http://localhost:8000/movies/themeMoreRepet') // Cambia la URL según tu 
                 }
             }
         });
+        chartInstances.t4 = th4c;
     })
     .catch(error => console.error('Error:', error));
 
@@ -768,12 +850,12 @@ fetch('http://localhost:8000/movies/bestratingpromxTheme') // Cambia la URL seg�
 
         
         // Crea la gráfica después de llenar las listas
-        new Chart(ra6, {
+        const ra6c = new Chart(ra6, {
             type: 'bar',
             data: {
                 labels: dataxra1,
                 datasets: [{
-                    label: '# of Votes',
+                    label: '#',
                     data: datayra1,
                     borderWidth: 1
                 }]
@@ -786,6 +868,7 @@ fetch('http://localhost:8000/movies/bestratingpromxTheme') // Cambia la URL seg�
                 }
             }
         });
+        chartInstances.r6 = ra6c;
     })
     .catch(error => console.error('Error:', error));
 
@@ -797,12 +880,12 @@ fetch('http://localhost:8000/movies/director/bestratingpromxDirector') // Cambia
         datayra2 = data.data.rating_prom.map(Number); // Cambia 'votes' según tu estructura JSON
         
         // Crea la gráfica después de llenar las listas
-        new Chart(ra2, {
+        const ra2c = new Chart(ra2, {
             type: 'bar',
             data: {
                 labels: dataxra2,
                 datasets: [{
-                    label: '# of Votes',
+                    label: '#',
                     data: datayra2,
                     borderWidth: 1
                 }]
@@ -815,6 +898,7 @@ fetch('http://localhost:8000/movies/director/bestratingpromxDirector') // Cambia
                 }
             }
         });
+        chartInstances.r2 = ra2c;
     })
     .catch(error => console.error('Error:', error));
 
@@ -825,12 +909,12 @@ fetch('http://localhost:8000/movies/actor/bestratingpromxactor') // Cambia la UR
         dataxra3 = data.data.actors; // Cambia 'labels' según tu estructura JSON
         datayra3 = data.data.rating.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(ra1, {
+        const ra1c= new Chart(ra1, {
             type: 'bar',
             data: {
                 labels: dataxra3,
                 datasets: [{
-                    label: '# of Votes',
+                    label: '#',
                     data: datayra3,
                     borderWidth: 1
                 }]
@@ -843,6 +927,7 @@ fetch('http://localhost:8000/movies/actor/bestratingpromxactor') // Cambia la UR
                 }
             }
         });
+        chartInstances.r3 = ra1c;
     })
     .catch(error => console.error('Error:', error));
 
@@ -853,12 +938,12 @@ fetch('http://localhost:8000/movies/year/bestratingpromxYear') // Cambia la URL 
         dataxra4 = data.data.years; // Cambia 'labels' según tu estructura JSON
         datayra4 = data.data.rating_prom.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(ra4, {
+        const ra4c = new Chart(ra4, {
             type: 'bar',
             data: {
                 labels: dataxra4,
                 datasets: [{
-                    label: '# of Votes',
+                    label: '#',
                     data: datayra4,
                     borderWidth: 1
                 }]
@@ -871,6 +956,7 @@ fetch('http://localhost:8000/movies/year/bestratingpromxYear') // Cambia la URL 
                 }
             }
         });
+        chartInstances.r4 = ra4c;
     })
     .catch(error => console.error('Error:', error));
 
@@ -881,12 +967,12 @@ fetch('http://localhost:8000/movies/genre/bestratingpromxGenre') // Cambia la UR
         dataxra5 = data.data.genres; // Cambia 'labels' según tu estructura JSON
         datayra5 = data.data.rating_prom.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(ra3, {
+        const ra3c = new Chart(ra3, {
             type: 'bar',
             data: {
                 labels: dataxra5,
                 datasets: [{
-                    label: '# of Votes',
+                    label: '#',
                     data: datayra5,
                     borderWidth: 1
                 }]
@@ -899,6 +985,7 @@ fetch('http://localhost:8000/movies/genre/bestratingpromxGenre') // Cambia la UR
                 }
             }
         });
+        chartInstances.r1 = ra3c;
     })
     .catch(error => console.error('Error:', error));
 
@@ -909,12 +996,12 @@ fetch('http://localhost:8000/movies/language/bestratingpromxlanguage') // Cambia
         dataxra6 = data.data.languages; // Cambia 'labels' según tu estructura JSON
         datayra6 = data.data.rating_prom.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(ra5, {
+        const ra5c = new Chart(ra5, {
             type: 'bar',
             data: {
                 labels: dataxra6,
                 datasets: [{
-                    label: '# of Votes',
+                    label: '#',
                     data: datayra6,
                     borderWidth: 1
                 }]
@@ -927,6 +1014,7 @@ fetch('http://localhost:8000/movies/language/bestratingpromxlanguage') // Cambia
                 }
             }
         });
+        chartInstances.r5 = ra5c;
     })
     .catch(error => console.error('Error:', error));
 
@@ -1019,12 +1107,12 @@ fetch('http://localhost:8000/movies/language/themesMoreRepxLanguage') // Cambia 
         dataxth6 = data.data.languages; // Cambia 'labels' según tu estructura JSON
         datayth6 = data.data.count_times.map(Number); // Cambia 'votes' según tu estructura JSON
         // Crea la gráfica después de llenar las listas
-        new Chart(ot5, {
+        const ot5c = new Chart(ot5, {
             type: 'bar',
             data: {
                 labels: dataxth6,
                 datasets: [{
-                    label: '# of Votes',
+                    label: '#',
                     data: datayth6,
                     borderWidth: 1
                 }]
@@ -1037,6 +1125,7 @@ fetch('http://localhost:8000/movies/language/themesMoreRepxLanguage') // Cambia 
                 }
             }
         });
+        chartInstances.o5 = ot5c;
     })
     .catch(error => console.error('Error:', error));
 
@@ -1052,7 +1141,7 @@ fetch('http://localhost:8000/movies/moviesbyrating') // Cambia la URL según tu 
             data: {
                 labels: dataxot6,
                 datasets: [{
-                    label: '# of Votes',
+                    label: '#',
                     data: datayot6,
                     borderWidth: 1
                 }]

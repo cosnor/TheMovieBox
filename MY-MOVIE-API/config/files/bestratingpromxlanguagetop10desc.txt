@@ -3,7 +3,7 @@ Belarusian,3.8174999999999994
 Pali,3.8
 Mayan,3.8
 Tatar,3.7
-Kikuyu, Gikuyu,3.675
+Kikuyu Gikuyu,3.675
 Yolngu matha,3.67
 Hiri Motu,3.67
 Fijian,3.67
