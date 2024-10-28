@@ -19,8 +19,8 @@ npm install
 
 ## Tecnologías
 - Frontend: HTML, CSS
-- Backend: JS
-- 
+- Backend: JS, Python, FastAPI,
+- Base de Datos: SQL Server
 API: MY-MOVIE-API
 
 scripts/chart.js: Se realizan las queries.
