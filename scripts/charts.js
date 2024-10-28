@@ -1021,83 +1021,349 @@ fetch('http://localhost:8000/movies/language/bestratingpromxlanguage') // Cambia
 //Los primeros 4 son del country
 
 //! Dentro de este fetch deben ir todos los que utilizan mapa
+const countryNameMapping = {
+    // Special cases and official names
+    "USA": "United States of America",
+    "UK": "United Kingdom",
+    "Lao People's Democratic Republic": "Laos",
+    "Bolivarian Republic of Venezuela": "Venezuela",
+    "State of Palestine": "Palestine",
+    "Democratic Republic of Congo": "Democratic Republic of the Congo",
+    "Federated States of Micronesia": "Micronesia",
+    "United Republic of Tanzania": "Tanzania",
+    "Republic of Moldova": "Moldova",
+    "Russian Federation": "Russia",
+    "Syrian Arab Republic": "Syria",
+    "Brunei Darussalam": "Brunei",
+    "Timor-Leste": "East Timor",
+    "Cape Verde": "Cabo Verde",
+    "Ivory Coast": "Côte d'Ivoire",
 
+    // Historical countries
+    "USSR": "Russia",
+    "East Germany": "Germany",
+    "Czechoslovakia": "Czech Republic",
+    "Yugoslavia": "Serbia",
+    "Serbia and Montenegro": "Serbia",
+
+    // French territories
+    "Martinique": "France",
+    "Guadeloupe": "France",
+    "French Guiana": "France",
+    "Réunion": "France",
+    "French Polynesia": "France",
+    "New Caledonia": "France",
+    "French Southern Territories": "France",
+    "Saint Pierre and Miquelon": "France",
+    "Mayotte": "France",
+    "Wallis and Futuna": "France",
+
+    // UK territories
+    "Gibraltar": "United Kingdom",
+    "Cayman Islands": "United Kingdom",
+    "Bermuda": "United Kingdom",
+    "British Virgin Islands": "United Kingdom",
+    "Anguilla": "United Kingdom",
+    "Montserrat": "United Kingdom",
+    "Pitcairn": "United Kingdom",
+    "British Indian Ocean Territory": "United Kingdom",
+    "Saint Helena, Ascension and Tristan da Cunha": "United Kingdom",
+    "Turks and Caicos Islands": "United Kingdom",
+    "Falkland Islands": "United Kingdom",
+
+    // US territories
+    "Puerto Rico": "United States of America",
+    "Northern Mariana Islands": "United States of America",
+    "American Samoa": "United States of America",
+    "US Virgin Islands": "United States of America",
+    "Guam": "United States of America",
+    "United States Minor Outlying Islands": "United States of America",
+
+    // Dutch territories
+    "Aruba": "Netherlands",
+    "Netherlands Antilles": "Netherlands",
+
+    // Small states
+    "Vatican City": "Italy",
+    "Monaco": "France",
+    "San Marino": "Italy",
+    "Andorra": "Spain",
+    "Liechtenstein": "Austria",
+
+    // Additional mappings from your list
+    "Saint Kitts and Nevis": "Saint Kitts and Nevis",
+    "Antigua and Barbuda": "Antigua and Barbuda",
+    "Finland": "Finland",
+    "Sao Tome and Principe": "São Tomé and Príncipe",
+    "Rwanda": "Rwanda",
+    "South Korea": "South Korea",
+    "Bahrain": "Bahrain",
+    "Christmas Island": "Australia",
+    "Gambia": "Gambia",
+    "Liberia": "Liberia",
+    "Guatemala": "Guatemala",
+    "Vietnam": "Vietnam",
+    "New Zealand": "New Zealand",
+    "Angola": "Angola",
+    "Uganda": "Uganda",
+    "Nauru": "Nauru",
+    "Egypt": "Egypt",
+    "Kyrgyzstan": "Kyrgyzstan",
+    "Cocos (Keeling) Islands": "Australia",
+    "Mali": "Mali",
+    "Italy": "Italy",
+    "Azerbaijan": "Azerbaijan",
+    "Brazil": "Brazil",
+    "Guinea-Bissau": "Guinea-Bissau",
+    "Netherlands": "Netherlands",
+    "Palau": "Palau",
+    "Namibia": "Namibia",
+    "Jordan": "Jordan",
+    "Cameroon": "Cameroon",
+    "Belarus": "Belarus",
+    "Madagascar": "Madagascar",
+    "Hong Kong": "China",
+    "Marshall Islands": "Marshall Islands",
+    "Bolivia": "Bolivia",
+    "Malaysia": "Malaysia",
+    "Sri Lanka": "Sri Lanka",
+    "Western Sahara": "Western Sahara",
+    "Indonesia": "Indonesia",
+    "Jamaica": "Jamaica",
+    "Germany": "Germany",
+    "Philippines": "Philippines",
+    "Uzbekistan": "Uzbekistan",
+    "Cuba": "Cuba",
+    "Lithuania": "Lithuania",
+    "Iceland": "Iceland",
+    "Senegal": "Senegal",
+    "Barbados": "Barbados",
+    "Kuwait": "Kuwait",
+    "Hungary": "Hungary",
+    "Cyprus": "Cyprus",
+    "Malawi": "Malawi",
+    "Switzerland": "Switzerland",
+    "Estonia": "Estonia",
+    "Algeria": "Algeria",
+    "Comoros": "Comoros",
+    "Ecuador": "Ecuador",
+    "Nigeria": "Nigeria",
+    "Samoa": "Samoa",
+    "North Macedonia": "North Macedonia",
+    "El Salvador": "El Salvador",
+    "Malta": "Malta",
+    "Bahamas": "Bahamas",
+    "Bosnia and Herzegovina": "Bosnia and Herzegovina",
+    "Mongolia": "Mongolia",
+    "Lebanon": "Lebanon",
+    "Montenegro": "Montenegro",
+    "Ethiopia": "Ethiopia",
+    "Saudi Arabia": "Saudi Arabia",
+    "Iraq": "Iraq",
+    "Chad": "Chad",
+    "Macao": "China",
+    "Australia": "Australia",
+    "Kosovo": "Kosovo",
+    "Mauritius": "Mauritius",
+    "Belize": "Belize",
+    "Mexico": "Mexico",
+    "Albania": "Albania",
+    "Myanmar": "Myanmar",
+    "Sierra Leone": "Sierra Leone",
+    "Sweden": "Sweden",
+    "Honduras": "Honduras",
+    "Kenya": "Kenya",
+    "Nicaragua": "Nicaragua",
+    "South Georgia and the South Sandwich Islands": "United Kingdom",
+    "Ukraine": "Ukraine",
+    "Trinidad and Tobago": "Trinidad and Tobago",
+    "China": "China",
+    "Argentina": "Argentina",
+    "Fiji": "Fiji",
+    "Solomon Islands": "Solomon Islands",
+    "Armenia": "Armenia",
+    "Serbia": "Serbia",
+    "Kiribati": "Kiribati",
+    "Peru": "Peru",
+    "Czechia": "Czech Republic",
+    "Libya": "Libya",
+    "India": "India",
+    "Burkina Faso": "Burkina Faso",
+    "Maldives": "Maldives",
+    "Croatia": "Croatia",
+    "Tuvalu": "Tuvalu",
+    "Austria": "Austria",
+    "Greece": "Greece",
+    "Botswana": "Botswana",
+    "Dominica": "Dominica",
+    "United Arab Emirates": "United Arab Emirates",
+    "Equatorial Guinea": "Equatorial Guinea",
+    "Israel": "Israel",
+    "Bouvet Island": "Norway",
+    "Qatar": "Qatar",
+    "Uruguay": "Uruguay",
+    "Zimbabwe": "Zimbabwe",
+    "Tonga": "Tonga",
+    "Tokelau": "New Zealand",
+    "Poland": "Poland",
+    "Suriname": "Suriname",
+    "Canada": "Canada",
+    "Bulgaria": "Bulgaria",
+    "Afghanistan": "Afghanistan",
+    "Central African Republic": "Central African Republic",
+    "Togo": "Togo",
+    "Burundi": "Burundi",
+    "Sudan": "Sudan",
+    "Saint Vincent and the Grenadines": "Saint Vincent and the Grenadines",
+    "Slovenia": "Slovenia",
+    "South Sudan": "South Sudan",
+    "Guyana": "Guyana",
+    "Tunisia": "Tunisia",
+    "Haiti": "Haiti",
+    "Ireland": "Ireland",
+    "Latvia": "Latvia",
+    "Niue": "New Zealand",
+    "Slovakia": "Slovakia",
+    "Mozambique": "Mozambique",
+    "Gabon": "Gabon",
+    "Somalia": "Somalia",
+    "Guinea": "Guinea",
+    "Thailand": "Thailand",
+    "Norway": "Norway",
+    "France": "France",
+    "Grenada": "Grenada",
+    "Benin": "Benin",
+    "Luxembourg": "Luxembourg",
+    "Dominican Republic": "Dominican Republic",
+    "Belgium": "Belgium",
+    "Japan": "Japan",
+    "Bhutan": "Bhutan",
+    "Turkmenistan": "Turkmenistan",
+    "Morocco": "Morocco",
+    "Tajikistan": "Tajikistan",
+    "Georgia": "Georgia",
+    "Spain": "Spain",
+    "Yemen": "Yemen",
+    "Oman": "Oman",
+    "Norfolk Island": "Australia",
+    "Saint Lucia": "Saint Lucia",
+    "Turkey": "Turkey",
+    "Papua New Guinea": "Papua New Guinea",
+    "Cook Islands": "New Zealand",
+    "Eritrea": "Eritrea",
+    "Bangladesh": "Bangladesh",
+    "Ghana": "Ghana",
+    "Congo": "Republic of the Congo",
+    "Denmark": "Denmark",
+    "Romania": "Romania",
+    "Pakistan": "Pakistan",
+    "Singapore": "Singapore",
+    "Colombia": "Colombia",
+    "Lesotho": "Lesotho",
+    "Panama": "Panama",
+    "Heard Island and McDonald Islands": "Australia",
+    "Cambodia": "Cambodia",
+    "Antarctica": "Antarctica",
+    "Seychelles": "Seychelles",
+    "Mauritania": "Mauritania",
+    "Niger": "Niger",
+    "Iran": "Iran",
+    "Chile": "Chile",
+    "Nepal": "Nepal",
+    "South Africa": "South Africa",
+    "Djibouti": "Djibouti",
+    "Zambia": "Zambia",
+    "Portugal": "Portugal",
+    "Taiwan": "Taiwan",
+    "Kazakhstan": "Kazakhstan",
+    "Costa Rica": "Costa Rica",
+    "North Korea": "North Korea",
+    "Paraguay": "Paraguay",
+    "Vanuatu": "Vanuatu"
+};
+
+function normalizeCountryName(countryName) {
+    return countryNameMapping[countryName] || countryName;
+}
+
+function processDataForGeoChart(data) {
+    return data.map(([country, value]) => ({
+        location: normalizeCountryName(country),
+        value: Number(value)
+    }));
+}
+
+// Implementation for all your charts
 fetch(url_countries)
     .then(response => response.json())
-    .then(datapoint => {
-        // Convertir datos TopoJSON de ChartGeo a una lista de países
-        const countries = ChartGeo.topojson.feature(datapoint, datapoint.objects.countries).features;
-        
-        // Extraer los nombres de los países
-        const countryNames = countries.map(country => country.properties.name);
+    .then(topojsonData => {
+        const countries = ChartGeo.topojson.feature(topojsonData, topojsonData.objects.countries).features;
 
-        // Definir una función para crear gráficos de barra
-        const createBarChart = (elementId, labels, data, label) => {
-            new Chart(elementId, {
-                type: 'bar',
-                data: {
-                    labels: labels,
-                    datasets: [{
-                        label: label,
-                        data: data,
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
-        };
-
-        // Primer gráfico: número de películas por país
         fetch('http://localhost:8000/movies/country')
             .then(response => response.json())
             .then(data => {
-                const dataxot1 = data.countries;
-                const datayot1 = data.number_of_movies.map(Number);
+                const processedData = countries.map(country => {
+                    const countryIndex = data.countries.findIndex(
+                        dataCountry => normalizeCountryName(dataCountry) === country.properties.name
+                    );
+                    
+                    return {
+                        feature: country,
+                        value: countryIndex !== -1 ? Number(data.number_of_movies[countryIndex]) : 0
+                    };
+                });
 
-                createBarChart(ot1, dataxot1, datayot1, 'Number of Movies');
+                new Chart(ot1, {
+                    type: 'choropleth',
+                    data: {
+                        labels: countries.map(c => c.properties.name),
+                        datasets: [{
+                            label: 'Number of Movies',
+                            data: processedData,
+                            borderWidth: 1,
+                            backgroundColor: (context) => {
+                                const value = context.raw?.value || 0;
+                                const maxValue = Math.max(...data.number_of_movies);
+                                const normalizedValue = value / maxValue;
+                                
+                                // Khaki color palette (from lighter to darker)
+                                const colors = {
+                                    r: Math.floor(240 - (normalizedValue * 50)), // From 240 to 190
+                                    g: Math.floor(230 - (normalizedValue * 50)), // From 230 to 180
+                                    b: Math.floor(140 - (normalizedValue * 40))  // From 140 to 100
+                                };
+                                
+                                return `rgb(${colors.r}, ${colors.g}, ${colors.b})`;
+                            },
+                            borderColor: '#8B864E' // Darker khaki for borders
+                        }]
+                    },
+                    options: {
+                        showOutline: true,
+                        showGraticule: true,
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: (context) => {
+                                        return `Movies: ${context.raw.value}`;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            xy: {
+                                projection: 'equalEarth'
+                            }
+                        }
+                    }
+                });
             })
-            .catch(error => console.error('Error en el primer fetch:', error));
-
-        // Segundo gráfico: cantidad de actores por país
-        fetch('http://localhost:8000/movies/country/cantActorsxCountry')
-            .then(response => response.json())
-            .then(data => {
-                const dataxot2 = data.countries;
-                const datayot2 = data.number_of_actors.map(Number);
-
-                createBarChart(ot2, dataxot2, datayot2, 'Number of Actors');
-            })
-            .catch(error => console.error('Error en el segundo fetch:', error));
-
-        // Tercer gráfico: temas más repetidos por país
-        fetch('http://localhost:8000/movies/country/themesMoreRepxCountry')
-            .then(response => response.json())
-            .then(data => {
-                const dataxot3 = data.countries;
-                const datayot3 = data.count_times.map(Number);
-
-                createBarChart(ot4, dataxot3, datayot3, 'Most Repeated Themes');
-            })
-            .catch(error => console.error('Error en el tercer fetch:', error));
-
-        // Cuarto gráfico: promedio de calificaciones por país
-        fetch('http://localhost:8000/movies/country/bestratingpromxCountry')
-            .then(response => response.json())
-            .then(data => {
-                const dataxot4 = data.countries;
-                const datayot4 = data.rating_prom.map(Number);
-
-                createBarChart(ot3, dataxot4, datayot4, 'Average Rating');
-            })
-            .catch(error => console.error('Error en el cuarto fetch:', error));
+            .catch(error => console.error('Error:', error));
     })
-    .catch(error => console.error('Error en el fetch de países:', error));
+    .catch(error => console.error('Error:', error)); 
 
 
 fetch('http://localhost:8000/movies/language/themesMoreRepxLanguage') // Cambia la URL según tu configuración
@@ -1128,6 +1394,7 @@ fetch('http://localhost:8000/movies/language/themesMoreRepxLanguage') // Cambia 
         chartInstances.o5 = ot5c;
     })
     .catch(error => console.error('Error:', error));
+
 
 fetch('http://localhost:8000/movies/moviesbyrating') // Cambia la URL según tu configuración
     .then(response => response.json())
