@@ -23,6 +23,8 @@ npm install
 - Base de Datos: SQL Server
 API: MY-MOVIE-API
 
+## Video Link
+
 scripts/chart.js: Se realizan las queries.
 
 Librerías: 
