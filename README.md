@@ -24,10 +24,12 @@ npm install
 API: MY-MOVIE-API
 
 ## Video Link
+https://youtu.be/nISJ8vt-0dE
 
+## Scripts
 scripts/chart.js: Se realizan las queries.
 
-Librerías: 
+## Librerías: 
 -- Chart JS: https://www.chartjs.org/docs/latest/
 --- Chart JS Chart Geo: https://www.npmjs.com/package/chartjs-chart-geo?activeTab=readme
  
